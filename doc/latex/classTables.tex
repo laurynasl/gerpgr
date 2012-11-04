@@ -1,0 +1,338 @@
+\section{Tables Class Reference}
+\label{classTables}\index{Tables@{Tables}}
+{\tt \#include $<$tables.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Tables} ()
+\item 
+{\bf $\sim$Tables} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static {\bf Tables} \& {\bf get\-Instance} ()
+\item 
+static int {\bf name\-To\-Item} (const QString item\-Name)
+\item 
+static const {\bf Item\-Class} \& {\bf item\-To\-Class} (const int item)
+\item 
+static int {\bf items\-Count} ()
+\item 
+static int {\bf name\-To\-Monster} (const QString name)
+\item 
+static {\bf Monster\-Class} \& {\bf monster\-To\-Class} (const int monster)
+\item 
+static int {\bf monsters\-Count} ()
+\item 
+static int {\bf name\-To\-Background} (const QString name)
+\item 
+static {\bf Background\-Class} \& {\bf background\-To\-Class} (const int background)
+\item 
+static int {\bf backgrounds\-Count} ()
+\item 
+static int {\bf search} (const {\bf Background\-Class} \&criteria, int checked\-Flags=INT\_\-MAX, bool debug=false)
+\begin{CompactList}\small\item\em Searches for a closest match background. \item\end{CompactList}\item 
+static int {\bf name\-To\-Object} (const QString name)
+\item 
+static {\bf Object\-Class} \& {\bf object\-To\-Class} (const int object)
+\item 
+static int {\bf objects\-Count} ()
+\item 
+static int {\bf search\-Object} (const QVariant\-Map \&criteria)
+\item 
+static int {\bf name\-To\-Token} (const QString name)
+\item 
+static QString {\bf token\-To\-Name} (const int token)
+\item 
+static bool {\bf token\-Name\-Exists} (QString name)
+\item 
+static int {\bf name\-To\-Skill} (const QString name)
+\item 
+static QString {\bf skill\-To\-Name} (const int skill)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf init} ()
+\item 
+{\bf Tables} \& {\bf operator+=} (QString c)
+\begin{CompactList}\small\item\em clears registered token list and adds token to list. must be followed by call to {\bf operator ,(int)}{\rm (p.\,\pageref{classTables_b3})}, e.g. parser += \char`\"{}token\char`\"{}, 5 \item\end{CompactList}\item 
+{\bf Tables} \& {\bf operator,} (QString c)
+\begin{CompactList}\small\item\em adds token to list. must be followed by call to {\bf operator ,(int)}{\rm (p.\,\pageref{classTables_b3})}, e.g. parser += \char`\"{}token\char`\"{}, 5; \item\end{CompactList}\item 
+{\bf Tables} \& {\bf operator,} (int number)
+\begin{CompactList}\small\item\em sets integer id for previously specified token (operators += and ,) must be called after += or , with QString parameter. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QList$<$ {\bf Monster\-Class} $>$ {\bf \_\-monster\-Classes}
+\item 
+QMap$<$ QString, int $>$ {\bf \_\-names\-To\-Monsters}
+\item 
+QList$<$ {\bf Item\-Class} $>$ {\bf \_\-item\-Classes}
+\item 
+QMap$<$ QString, int $>$ {\bf \_\-names\-To\-Items}
+\item 
+QList$<$ {\bf Background\-Class} $>$ {\bf \_\-background\-Classes}
+\item 
+QMap$<$ QString, int $>$ {\bf \_\-names\-To\-Backgrounds}
+\item 
+QList$<$ {\bf Object\-Class} $>$ {\bf \_\-object\-Classes}
+\item 
+QMap$<$ QString, int $>$ {\bf \_\-names\-To\-Objects}
+\item 
+QMap$<$ QString, int $>$ {\bf \_\-names\-To\-Tokens}
+\item 
+QMap$<$ int, QString $>$ {\bf \_\-tokens\-To\-Names}
+\item 
+QMap$<$ QString, int $>$ {\bf \_\-names\-To\-Skills}
+\item 
+QList$<$ QString $>$ {\bf \_\-skills\-To\-Names}
+\item 
+bool {\bf waiting\-ID}
+\item 
+QString {\bf last\-Reg\-Token}
+\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static {\bf Tables} $\ast$ {\bf instance} = 0
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tables@{Tables}!Tables@{Tables}}
+\index{Tables@{Tables}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Tables} ()}\label{classTables_a0}
+
+
+\index{Tables@{Tables}!~Tables@{$\sim$Tables}}
+\index{~Tables@{$\sim$Tables}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Tables} ()}\label{classTables_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Tables@{Tables}!backgroundsCount@{backgroundsCount}}
+\index{backgroundsCount@{backgroundsCount}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int backgrounds\-Count ()\hspace{0.3cm}{\tt  [static]}}\label{classTables_e9}
+
+
+\index{Tables@{Tables}!backgroundToClass@{backgroundToClass}}
+\index{backgroundToClass@{backgroundToClass}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Background\-Class} \& background\-To\-Class (const int {\em background})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e8}
+
+
+\index{Tables@{Tables}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Tables} \& get\-Instance ()\hspace{0.3cm}{\tt  [static]}}\label{classTables_e0}
+
+
+\index{Tables@{Tables}!init@{init}}
+\index{init@{init}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init ()\hspace{0.3cm}{\tt  [protected]}}\label{classTables_b0}
+
+
+\index{Tables@{Tables}!itemsCount@{itemsCount}}
+\index{itemsCount@{itemsCount}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int items\-Count ()\hspace{0.3cm}{\tt  [static]}}\label{classTables_e3}
+
+
+\index{Tables@{Tables}!itemToClass@{itemToClass}}
+\index{itemToClass@{itemToClass}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const {\bf Item\-Class} \& item\-To\-Class (const int {\em item})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e2}
+
+
+\index{Tables@{Tables}!monstersCount@{monstersCount}}
+\index{monstersCount@{monstersCount}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int monsters\-Count ()\hspace{0.3cm}{\tt  [static]}}\label{classTables_e6}
+
+
+\index{Tables@{Tables}!monsterToClass@{monsterToClass}}
+\index{monsterToClass@{monsterToClass}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Monster\-Class} \& monster\-To\-Class (const int {\em monster})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e5}
+
+
+\index{Tables@{Tables}!nameToBackground@{nameToBackground}}
+\index{nameToBackground@{nameToBackground}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int name\-To\-Background (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e7}
+
+
+\index{Tables@{Tables}!nameToItem@{nameToItem}}
+\index{nameToItem@{nameToItem}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int name\-To\-Item (const QString {\em item\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e1}
+
+
+\index{Tables@{Tables}!nameToMonster@{nameToMonster}}
+\index{nameToMonster@{nameToMonster}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int name\-To\-Monster (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e4}
+
+
+\index{Tables@{Tables}!nameToObject@{nameToObject}}
+\index{nameToObject@{nameToObject}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int name\-To\-Object (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e11}
+
+
+\index{Tables@{Tables}!nameToSkill@{nameToSkill}}
+\index{nameToSkill@{nameToSkill}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int name\-To\-Skill (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e18}
+
+
+\index{Tables@{Tables}!nameToToken@{nameToToken}}
+\index{nameToToken@{nameToToken}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int name\-To\-Token (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e15}
+
+
+\index{Tables@{Tables}!objectsCount@{objectsCount}}
+\index{objectsCount@{objectsCount}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int objects\-Count ()\hspace{0.3cm}{\tt  [static]}}\label{classTables_e13}
+
+
+\index{Tables@{Tables}!objectToClass@{objectToClass}}
+\index{objectToClass@{objectToClass}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Object\-Class} \& object\-To\-Class (const int {\em object})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e12}
+
+
+\index{Tables@{Tables}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Tables} \& operator+= (QString {\em c})\hspace{0.3cm}{\tt  [protected]}}\label{classTables_b1}
+
+
+clears registered token list and adds token to list. must be followed by call to {\bf operator ,(int)}{\rm (p.\,\pageref{classTables_b3})}, e.g. parser += \char`\"{}token\char`\"{}, 5 
+
+\index{Tables@{Tables}!operator,@{operator,}}
+\index{operator,@{operator,}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Tables} \& operator, (int {\em number})\hspace{0.3cm}{\tt  [protected]}}\label{classTables_b3}
+
+
+sets integer id for previously specified token (operators += and ,) must be called after += or , with QString parameter. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em number}]token id\end{description}
+\end{Desc}
+\index{Tables@{Tables}!operator,@{operator,}}
+\index{operator,@{operator,}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Tables} \& operator, (QString {\em c})\hspace{0.3cm}{\tt  [protected]}}\label{classTables_b2}
+
+
+adds token to list. must be followed by call to {\bf operator ,(int)}{\rm (p.\,\pageref{classTables_b3})}, e.g. parser += \char`\"{}token\char`\"{}, 5; 
+
+\index{Tables@{Tables}!search@{search}}
+\index{search@{search}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int search (const {\bf Background\-Class} \& {\em criteria}, int {\em checked\-Flags} = {\tt INT\_\-MAX}, bool {\em debug} = {\tt false})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e10}
+
+
+Searches for a closest match background. 
+
+Flags must be the same, height must be closest
+
+\begin{Desc}
+\item[Returns:]closest match, -1 on no match\end{Desc}
+\index{Tables@{Tables}!searchObject@{searchObject}}
+\index{searchObject@{searchObject}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int search\-Object (const QVariant\-Map \& {\em criteria})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e14}
+
+
+\index{Tables@{Tables}!skillToName@{skillToName}}
+\index{skillToName@{skillToName}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString skill\-To\-Name (const int {\em skill})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e19}
+
+
+\index{Tables@{Tables}!tokenNameExists@{tokenNameExists}}
+\index{tokenNameExists@{tokenNameExists}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool token\-Name\-Exists (QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e17}
+
+
+\index{Tables@{Tables}!tokenToName@{tokenToName}}
+\index{tokenToName@{tokenToName}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString token\-To\-Name (const int {\em token})\hspace{0.3cm}{\tt  [static]}}\label{classTables_e16}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Tables@{Tables}!_backgroundClasses@{\_\-backgroundClasses}}
+\index{_backgroundClasses@{\_\-backgroundClasses}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Background\-Class}$>$ {\bf \_\-background\-Classes}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p4}
+
+
+\index{Tables@{Tables}!_itemClasses@{\_\-itemClasses}}
+\index{_itemClasses@{\_\-itemClasses}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Item\-Class}$>$ {\bf \_\-item\-Classes}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p2}
+
+
+\index{Tables@{Tables}!_monsterClasses@{\_\-monsterClasses}}
+\index{_monsterClasses@{\_\-monsterClasses}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Monster\-Class}$>$ {\bf \_\-monster\-Classes}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p0}
+
+
+\index{Tables@{Tables}!_namesToBackgrounds@{\_\-namesToBackgrounds}}
+\index{_namesToBackgrounds@{\_\-namesToBackgrounds}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,int$>$ {\bf \_\-names\-To\-Backgrounds}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p5}
+
+
+\index{Tables@{Tables}!_namesToItems@{\_\-namesToItems}}
+\index{_namesToItems@{\_\-namesToItems}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,int$>$ {\bf \_\-names\-To\-Items}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p3}
+
+
+\index{Tables@{Tables}!_namesToMonsters@{\_\-namesToMonsters}}
+\index{_namesToMonsters@{\_\-namesToMonsters}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,int$>$ {\bf \_\-names\-To\-Monsters}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p1}
+
+
+\index{Tables@{Tables}!_namesToObjects@{\_\-namesToObjects}}
+\index{_namesToObjects@{\_\-namesToObjects}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,int$>$ {\bf \_\-names\-To\-Objects}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p7}
+
+
+\index{Tables@{Tables}!_namesToSkills@{\_\-namesToSkills}}
+\index{_namesToSkills@{\_\-namesToSkills}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,int$>$ {\bf \_\-names\-To\-Skills}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p10}
+
+
+\index{Tables@{Tables}!_namesToTokens@{\_\-namesToTokens}}
+\index{_namesToTokens@{\_\-namesToTokens}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,int$>$ {\bf \_\-names\-To\-Tokens}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p8}
+
+
+\index{Tables@{Tables}!_objectClasses@{\_\-objectClasses}}
+\index{_objectClasses@{\_\-objectClasses}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Object\-Class}$>$ {\bf \_\-object\-Classes}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p6}
+
+
+\index{Tables@{Tables}!_skillsToNames@{\_\-skillsToNames}}
+\index{_skillsToNames@{\_\-skillsToNames}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<$QString$>$ {\bf \_\-skills\-To\-Names}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p11}
+
+
+\index{Tables@{Tables}!_tokensToNames@{\_\-tokensToNames}}
+\index{_tokensToNames@{\_\-tokensToNames}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$int,QString$>$ {\bf \_\-tokens\-To\-Names}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p9}
+
+
+\index{Tables@{Tables}!instance@{instance}}
+\index{instance@{instance}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Tables} $\ast$ {\bf instance} = 0\hspace{0.3cm}{\tt  [static, protected]}}\label{classTables_t0}
+
+
+\index{Tables@{Tables}!lastRegToken@{lastRegToken}}
+\index{lastRegToken@{lastRegToken}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString {\bf last\-Reg\-Token}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p13}
+
+
+\index{Tables@{Tables}!waitingID@{waitingID}}
+\index{waitingID@{waitingID}!Tables@{Tables}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf waiting\-ID}\hspace{0.3cm}{\tt  [protected]}}\label{classTables_p12}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf tables.hpp}\item 
+{\bf tables.cpp}\end{CompactItemize}

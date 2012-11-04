@@ -1,0 +1,21 @@
+// tiles1
+object "Upstair"
+    option_string   "type"      "stair"
+    option_bool     "isup"      true
+    //option_int      "opt"   14
+end
+
+object "Downstair"
+    option_string   "type"      "stair"
+    option_bool     "isup"      false
+end
+
+object "OpenDoor"
+    option_string   "type"      "door"
+    option_bool     "closed"    false
+end
+
+object "ClosedDoor"
+    option_string   "type"      "door"
+    option_bool     "closed"    true
+end

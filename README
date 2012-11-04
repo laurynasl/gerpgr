@@ -1,0 +1,13 @@
+tools I use: gcc, Qt 4.1.2, Doxygen, kate, subversion
+
+This is a game I currently call "gerpgr".
+It is currently unplayable, in early development stage.
+The main idea of this game is to create a RPG (or roguelike)
+game which would be interesting even for it's creator.
+That means my plan is first to create a
+game that can be played by loading hand-written maps
+and then to write "world generator". So the game must
+be very flexible: every object in game must be fully
+describable in text file. So development goes slowly
+but it will pay off later.
+

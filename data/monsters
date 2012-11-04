@@ -1,0 +1,17 @@
+monster "Default"
+end
+
+monster "Blob"
+    //<attribute> minValue maxValue
+    strength 4 7
+    constitution 6 8
+    dexterity 4 5
+    intelligence 1 2
+    charisma 1 2
+    willpower 1 2
+    luck 9 11
+    perception 4 6
+    beauty 3 4
+    //skill skillName minValue maxValue
+    skill "level" 1 2
+end

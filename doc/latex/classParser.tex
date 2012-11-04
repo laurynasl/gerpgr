@@ -1,0 +1,231 @@
+\section{Parser Class Reference}
+\label{classParser}\index{Parser@{Parser}}
+{\tt \#include $<$parser.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Parser} (QString filename)
+\item 
+virtual {\bf $\sim$Parser} ()
+\item 
+bool {\bf eof} ()
+\begin{CompactList}\small\item\em end of stream? \item\end{CompactList}\item 
+int {\bf line} ()
+\begin{CompactList}\small\item\em current line number. \item\end{CompactList}\item 
+int {\bf next\-Token} ()
+\begin{CompactList}\small\item\em reads token word from stream and returns corresponding integer, registered with += and , operators. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em {\bf EParser}{\rm (p.\,\pageref{classEParser})}}]if read word is not registered token. \end{description}
+\end{Desc}
+\item\end{CompactList}\item 
+bool {\bf try\-Next\-Token} ()
+\item 
+int {\bf last\-Token} ()
+\item 
+{\bf Parser} \& {\bf operator$>$$>$} (int \&number)
+\item 
+{\bf Parser} \& {\bf operator$>$$>$} (float \&number)
+\item 
+{\bf Parser} \& {\bf operator$>$$>$} (QString \&text)
+\item 
+int {\bf get\-Int} ()
+\begin{CompactList}\small\item\em reads integer from stream. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em exception}]if no int found. \end{description}
+\end{Desc}
+\item\end{CompactList}\item 
+float {\bf get\-Float} ()
+\item 
+QString {\bf get\-String} ()
+\begin{CompactList}\small\item\em reads quoted string from input. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em {\bf EParser}{\rm (p.\,\pageref{classEParser})}}]if no string found. \end{description}
+\end{Desc}
+\item\end{CompactList}\item 
+void {\bf match} (QString c)
+\begin{CompactList}\small\item\em reads and matches given string. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em exception}]if input and string differs. \end{description}
+\end{Desc}
+\item\end{CompactList}\item 
+bool {\bf try\-Match} (QString c)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf skip\-Whitespace} ()
+\begin{CompactList}\small\item\em skips whitespace, C++ comments (//..), C comments (/ $\ast$...$\ast$ /) in input. \item\end{CompactList}\item 
+void {\bf read\-Token} ()
+\begin{CompactList}\small\item\em skips whitespace and reads a token to m\-Last\-Word until whitespace or any of \{/ , . EOF\} is found in stream. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QFile {\bf input}
+\item 
+int {\bf \_\-line}
+\item 
+int {\bf \_\-last\-Token}
+\item 
+QByte\-Array {\bf last\-Word}
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Parser@{Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser} (QString {\em filename})}\label{classParser_a0}
+
+
+\index{Parser@{Parser}!~Parser@{$\sim$Parser}}
+\index{~Parser@{$\sim$Parser}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf Parser} ()\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classParser_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Parser@{Parser}!eof@{eof}}
+\index{eof@{eof}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool eof ()}\label{classParser_a2}
+
+
+end of stream? 
+
+\index{Parser@{Parser}!getFloat@{getFloat}}
+\index{getFloat@{getFloat}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float get\-Float ()}\label{classParser_a11}
+
+
+\index{Parser@{Parser}!getInt@{getInt}}
+\index{getInt@{getInt}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\-Int ()}\label{classParser_a10}
+
+
+reads integer from stream. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em exception}]if no int found. \end{description}
+\end{Desc}
+
+
+\index{Parser@{Parser}!getString@{getString}}
+\index{getString@{getString}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString get\-String ()}\label{classParser_a12}
+
+
+reads quoted string from input. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em {\bf EParser}{\rm (p.\,\pageref{classEParser})}}]if no string found. \end{description}
+\end{Desc}
+
+
+\index{Parser@{Parser}!lastToken@{lastToken}}
+\index{lastToken@{lastToken}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int last\-Token ()}\label{classParser_a6}
+
+
+\index{Parser@{Parser}!line@{line}}
+\index{line@{line}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int line ()}\label{classParser_a3}
+
+
+current line number. 
+
+\index{Parser@{Parser}!match@{match}}
+\index{match@{match}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void match (QString {\em c})}\label{classParser_a13}
+
+
+reads and matches given string. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em exception}]if input and string differs. \end{description}
+\end{Desc}
+
+
+\index{Parser@{Parser}!nextToken@{nextToken}}
+\index{nextToken@{nextToken}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int next\-Token ()}\label{classParser_a4}
+
+
+reads token word from stream and returns corresponding integer, registered with += and , operators. \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em {\bf EParser}{\rm (p.\,\pageref{classEParser})}}]if read word is not registered token. \end{description}
+\end{Desc}
+
+
+\index{Parser@{Parser}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser} \& operator$>$$>$ (QString \& {\em text})}\label{classParser_a9}
+
+
+\index{Parser@{Parser}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser} \& operator$>$$>$ (float \& {\em number})}\label{classParser_a8}
+
+
+\index{Parser@{Parser}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser} \& operator$>$$>$ (int \& {\em number})}\label{classParser_a7}
+
+
+\index{Parser@{Parser}!readToken@{readToken}}
+\index{readToken@{readToken}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void read\-Token ()\hspace{0.3cm}{\tt  [protected]}}\label{classParser_b1}
+
+
+skips whitespace and reads a token to m\-Last\-Word until whitespace or any of \{/ , . EOF\} is found in stream. 
+
+\index{Parser@{Parser}!skipWhitespace@{skipWhitespace}}
+\index{skipWhitespace@{skipWhitespace}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void skip\-Whitespace ()\hspace{0.3cm}{\tt  [protected]}}\label{classParser_b0}
+
+
+skips whitespace, C++ comments (//..), C comments (/ $\ast$...$\ast$ /) in input. 
+
+\index{Parser@{Parser}!tryMatch@{tryMatch}}
+\index{tryMatch@{tryMatch}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool try\-Match (QString {\em c})}\label{classParser_a14}
+
+
+\index{Parser@{Parser}!tryNextToken@{tryNextToken}}
+\index{tryNextToken@{tryNextToken}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool try\-Next\-Token ()}\label{classParser_a5}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Parser@{Parser}!_lastToken@{\_\-lastToken}}
+\index{_lastToken@{\_\-lastToken}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-last\-Token}\hspace{0.3cm}{\tt  [protected]}}\label{classParser_p2}
+
+
+\index{Parser@{Parser}!_line@{\_\-line}}
+\index{_line@{\_\-line}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-line}\hspace{0.3cm}{\tt  [protected]}}\label{classParser_p1}
+
+
+\index{Parser@{Parser}!input@{input}}
+\index{input@{input}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QFile {\bf input}\hspace{0.3cm}{\tt  [protected]}}\label{classParser_p0}
+
+
+\index{Parser@{Parser}!lastWord@{lastWord}}
+\index{lastWord@{lastWord}!Parser@{Parser}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QByte\-Array {\bf last\-Word}\hspace{0.3cm}{\tt  [protected]}}\label{classParser_p3}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf parser.hpp}\item 
+{\bf parser.cpp}\end{CompactItemize}

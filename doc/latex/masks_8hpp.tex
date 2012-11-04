@@ -1,0 +1,336 @@
+\section{masks.hpp File Reference}
+\label{masks_8hpp}\index{masks.hpp@{masks.hpp}}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum {\bf Token\-Type} \{ \par
+{\bf tkt\-Map} =  token\-Type\-Mask, 
+{\bf tkt\-Tile}, 
+{\bf tkt\-Tiles\-Range}, 
+{\bf tkt\-Player}, 
+\par
+{\bf tkt\-Monster}, 
+{\bf tkt\-Monsters}, 
+{\bf tkt\-At}, 
+{\bf tkt\-Random}, 
+\par
+{\bf tkt\-In}, 
+{\bf tkt\-Attributes}, 
+{\bf tkt\-Health}, 
+{\bf tkt\-Name}, 
+\par
+{\bf tkt\-End}, 
+{\bf tkt\-Trigger}, 
+{\bf tkt\-Question}, 
+{\bf tkt\-Onehanded}, 
+\par
+{\bf tkt\-Twohanded}, 
+{\bf tkt\-Thrown}, 
+{\bf tkt\-Minstrength}, 
+{\bf tkt\-Attack}, 
+\par
+{\bf tkt\-Item}, 
+{\bf tkt\-Skill}, 
+{\bf tkt\-Non\-Stackable}, 
+{\bf tkt\-Stackable}, 
+\par
+{\bf tkt\-Depletable}, 
+{\bf tkt\-Coordinates}, 
+{\bf tkt\-Travel}, 
+{\bf tkt\-World}, 
+\par
+{\bf tkt\-Generate}, 
+{\bf tkt\-Type}, 
+{\bf tkt\-Hint}, 
+{\bf tkt\-Object}, 
+\par
+{\bf tkt\-Option}, 
+{\bf tkt\-Option\-Token}, 
+{\bf tkt\-Option\-String}, 
+{\bf tkt\-Option\-Bool}, 
+\par
+{\bf tkt\-Option\-Int}, 
+{\bf tkt\-Option\-Float}, 
+{\bf tkt\-False}, 
+{\bf tkt\-True}, 
+\par
+{\bf tkt\-Like}, 
+{\bf tkt\-Prototype}, 
+{\bf tkt\-Equip\-Slot}, 
+{\bf tkt\-Key}, 
+\par
+{\bf tkt\-Dv}, 
+{\bf tkt\-Damage}, 
+{\bf tkt\-Hp}, 
+{\bf tkt\-Fp}, 
+\par
+{\bf tkt\-Mp}, 
+{\bf tkt\-Elemental}, 
+{\bf tkt\-Maximum}, 
+{\bf tkt\-Multiplier}, 
+\par
+{\bf tkt\-Obstacle}, 
+{\bf tkt\-Bulletproof}, 
+{\bf tkt\-Visionproof}, 
+{\bf tkt\-Height}, 
+\par
+{\bf tkt\-Mainmap}, 
+{\bf tkt\-Underground}, 
+{\bf tkt\-Strength}, 
+{\bf tkt\-Constitution}, 
+\par
+{\bf tkt\-Dexterity}, 
+{\bf tkt\-Intelligence}, 
+{\bf tkt\-Charisma}, 
+{\bf tkt\-Willpower}, 
+\par
+{\bf tkt\-Luck}, 
+{\bf tkt\-Perception}, 
+{\bf tkt\-Beauty}
+ \}
+\item 
+enum {\bf Equipment\-Type} \{ \par
+{\bf ett\-Helm} =  equipment\-Type\-Mask, 
+{\bf ett\-Amulet}, 
+{\bf ett\-Hand}, 
+{\bf ett\-Offhand}, 
+\par
+{\bf ett\-Two\-Hands}, 
+{\bf ett\-Launcher}, 
+{\bf ett\-Ammunition}, 
+{\bf ett\-Armor}, 
+\par
+{\bf ett\-Clothes}, 
+{\bf ett\-Gloves}, 
+{\bf ett\-Belt}, 
+{\bf ett\-Boots}, 
+\par
+{\bf ett\-Equipment\-Types\-Count}
+ \}
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const int {\bf token\-Type\-Mask} = 0x60000
+\item 
+const int {\bf equipment\-Type\-Mask} = 0x80000
+\item 
+const int {\bf get\-Token\-Type\-Mask} = 0xffff0000
+\item 
+const int {\bf token\-Mask} = 0x0FFFF
+\item 
+const int {\bf equipment\-Types\-Count} = (int)ett\-Equipment\-Types\-Count \& {\bf token\-Mask}
+\end{CompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{masks.hpp@{masks.hpp}!EquipmentType@{EquipmentType}}
+\index{EquipmentType@{EquipmentType}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Equipment\-Type}}\label{masks_8hpp_a86}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ettHelm@{ettHelm}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettHelm@{ettHelm}}\item[{\em 
+ett\-Helm\label{masks_8hpp_a86a72}
+}]\index{ettAmulet@{ettAmulet}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettAmulet@{ettAmulet}}\item[{\em 
+ett\-Amulet\label{masks_8hpp_a86a73}
+}]\index{ettHand@{ettHand}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettHand@{ettHand}}\item[{\em 
+ett\-Hand\label{masks_8hpp_a86a74}
+}]\index{ettOffhand@{ettOffhand}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettOffhand@{ettOffhand}}\item[{\em 
+ett\-Offhand\label{masks_8hpp_a86a75}
+}]\index{ettTwoHands@{ettTwoHands}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettTwoHands@{ettTwoHands}}\item[{\em 
+ett\-Two\-Hands\label{masks_8hpp_a86a76}
+}]\index{ettLauncher@{ettLauncher}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettLauncher@{ettLauncher}}\item[{\em 
+ett\-Launcher\label{masks_8hpp_a86a77}
+}]\index{ettAmmunition@{ettAmmunition}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettAmmunition@{ettAmmunition}}\item[{\em 
+ett\-Ammunition\label{masks_8hpp_a86a78}
+}]\index{ettArmor@{ettArmor}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettArmor@{ettArmor}}\item[{\em 
+ett\-Armor\label{masks_8hpp_a86a79}
+}]\index{ettClothes@{ettClothes}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettClothes@{ettClothes}}\item[{\em 
+ett\-Clothes\label{masks_8hpp_a86a80}
+}]\index{ettGloves@{ettGloves}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettGloves@{ettGloves}}\item[{\em 
+ett\-Gloves\label{masks_8hpp_a86a81}
+}]\index{ettBelt@{ettBelt}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettBelt@{ettBelt}}\item[{\em 
+ett\-Belt\label{masks_8hpp_a86a82}
+}]\index{ettBoots@{ettBoots}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettBoots@{ettBoots}}\item[{\em 
+ett\-Boots\label{masks_8hpp_a86a83}
+}]\index{ettEquipmentTypesCount@{ettEquipmentTypesCount}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!ettEquipmentTypesCount@{ettEquipmentTypesCount}}\item[{\em 
+ett\-Equipment\-Types\-Count\label{masks_8hpp_a86a84}
+}]\end{description}
+\end{Desc}
+
+\index{masks.hpp@{masks.hpp}!TokenType@{TokenType}}
+\index{TokenType@{TokenType}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Token\-Type}}\label{masks_8hpp_a85}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{tktMap@{tktMap}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMap@{tktMap}}\item[{\em 
+tkt\-Map\label{masks_8hpp_a85a5}
+}]\index{tktTile@{tktTile}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktTile@{tktTile}}\item[{\em 
+tkt\-Tile\label{masks_8hpp_a85a6}
+}]\index{tktTilesRange@{tktTilesRange}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktTilesRange@{tktTilesRange}}\item[{\em 
+tkt\-Tiles\-Range\label{masks_8hpp_a85a7}
+}]\index{tktPlayer@{tktPlayer}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktPlayer@{tktPlayer}}\item[{\em 
+tkt\-Player\label{masks_8hpp_a85a8}
+}]\index{tktMonster@{tktMonster}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMonster@{tktMonster}}\item[{\em 
+tkt\-Monster\label{masks_8hpp_a85a9}
+}]\index{tktMonsters@{tktMonsters}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMonsters@{tktMonsters}}\item[{\em 
+tkt\-Monsters\label{masks_8hpp_a85a10}
+}]\index{tktAt@{tktAt}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktAt@{tktAt}}\item[{\em 
+tkt\-At\label{masks_8hpp_a85a11}
+}]\index{tktRandom@{tktRandom}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktRandom@{tktRandom}}\item[{\em 
+tkt\-Random\label{masks_8hpp_a85a12}
+}]\index{tktIn@{tktIn}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktIn@{tktIn}}\item[{\em 
+tkt\-In\label{masks_8hpp_a85a13}
+}]\index{tktAttributes@{tktAttributes}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktAttributes@{tktAttributes}}\item[{\em 
+tkt\-Attributes\label{masks_8hpp_a85a14}
+}]\index{tktHealth@{tktHealth}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktHealth@{tktHealth}}\item[{\em 
+tkt\-Health\label{masks_8hpp_a85a15}
+}]\index{tktName@{tktName}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktName@{tktName}}\item[{\em 
+tkt\-Name\label{masks_8hpp_a85a16}
+}]\index{tktEnd@{tktEnd}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktEnd@{tktEnd}}\item[{\em 
+tkt\-End\label{masks_8hpp_a85a17}
+}]\index{tktTrigger@{tktTrigger}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktTrigger@{tktTrigger}}\item[{\em 
+tkt\-Trigger\label{masks_8hpp_a85a18}
+}]\index{tktQuestion@{tktQuestion}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktQuestion@{tktQuestion}}\item[{\em 
+tkt\-Question\label{masks_8hpp_a85a19}
+}]\index{tktOnehanded@{tktOnehanded}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOnehanded@{tktOnehanded}}\item[{\em 
+tkt\-Onehanded\label{masks_8hpp_a85a20}
+}]\index{tktTwohanded@{tktTwohanded}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktTwohanded@{tktTwohanded}}\item[{\em 
+tkt\-Twohanded\label{masks_8hpp_a85a21}
+}]\index{tktThrown@{tktThrown}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktThrown@{tktThrown}}\item[{\em 
+tkt\-Thrown\label{masks_8hpp_a85a22}
+}]\index{tktMinstrength@{tktMinstrength}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMinstrength@{tktMinstrength}}\item[{\em 
+tkt\-Minstrength\label{masks_8hpp_a85a23}
+}]\index{tktAttack@{tktAttack}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktAttack@{tktAttack}}\item[{\em 
+tkt\-Attack\label{masks_8hpp_a85a24}
+}]\index{tktItem@{tktItem}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktItem@{tktItem}}\item[{\em 
+tkt\-Item\label{masks_8hpp_a85a25}
+}]\index{tktSkill@{tktSkill}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktSkill@{tktSkill}}\item[{\em 
+tkt\-Skill\label{masks_8hpp_a85a26}
+}]\index{tktNonStackable@{tktNonStackable}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktNonStackable@{tktNonStackable}}\item[{\em 
+tkt\-Non\-Stackable\label{masks_8hpp_a85a27}
+}]\index{tktStackable@{tktStackable}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktStackable@{tktStackable}}\item[{\em 
+tkt\-Stackable\label{masks_8hpp_a85a28}
+}]\index{tktDepletable@{tktDepletable}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktDepletable@{tktDepletable}}\item[{\em 
+tkt\-Depletable\label{masks_8hpp_a85a29}
+}]\index{tktCoordinates@{tktCoordinates}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktCoordinates@{tktCoordinates}}\item[{\em 
+tkt\-Coordinates\label{masks_8hpp_a85a30}
+}]\index{tktTravel@{tktTravel}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktTravel@{tktTravel}}\item[{\em 
+tkt\-Travel\label{masks_8hpp_a85a31}
+}]\index{tktWorld@{tktWorld}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktWorld@{tktWorld}}\item[{\em 
+tkt\-World\label{masks_8hpp_a85a32}
+}]\index{tktGenerate@{tktGenerate}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktGenerate@{tktGenerate}}\item[{\em 
+tkt\-Generate\label{masks_8hpp_a85a33}
+}]\index{tktType@{tktType}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktType@{tktType}}\item[{\em 
+tkt\-Type\label{masks_8hpp_a85a34}
+}]\index{tktHint@{tktHint}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktHint@{tktHint}}\item[{\em 
+tkt\-Hint\label{masks_8hpp_a85a35}
+}]\index{tktObject@{tktObject}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktObject@{tktObject}}\item[{\em 
+tkt\-Object\label{masks_8hpp_a85a36}
+}]\index{tktOption@{tktOption}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOption@{tktOption}}\item[{\em 
+tkt\-Option\label{masks_8hpp_a85a37}
+}]\index{tktOptionToken@{tktOptionToken}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOptionToken@{tktOptionToken}}\item[{\em 
+tkt\-Option\-Token\label{masks_8hpp_a85a38}
+}]\index{tktOptionString@{tktOptionString}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOptionString@{tktOptionString}}\item[{\em 
+tkt\-Option\-String\label{masks_8hpp_a85a39}
+}]\index{tktOptionBool@{tktOptionBool}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOptionBool@{tktOptionBool}}\item[{\em 
+tkt\-Option\-Bool\label{masks_8hpp_a85a40}
+}]\index{tktOptionInt@{tktOptionInt}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOptionInt@{tktOptionInt}}\item[{\em 
+tkt\-Option\-Int\label{masks_8hpp_a85a41}
+}]\index{tktOptionFloat@{tktOptionFloat}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktOptionFloat@{tktOptionFloat}}\item[{\em 
+tkt\-Option\-Float\label{masks_8hpp_a85a42}
+}]\index{tktFalse@{tktFalse}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktFalse@{tktFalse}}\item[{\em 
+tkt\-False\label{masks_8hpp_a85a43}
+}]\index{tktTrue@{tktTrue}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktTrue@{tktTrue}}\item[{\em 
+tkt\-True\label{masks_8hpp_a85a44}
+}]\index{tktLike@{tktLike}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktLike@{tktLike}}\item[{\em 
+tkt\-Like\label{masks_8hpp_a85a45}
+}]\index{tktPrototype@{tktPrototype}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktPrototype@{tktPrototype}}\item[{\em 
+tkt\-Prototype\label{masks_8hpp_a85a46}
+}]\index{tktEquipSlot@{tktEquipSlot}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktEquipSlot@{tktEquipSlot}}\item[{\em 
+tkt\-Equip\-Slot\label{masks_8hpp_a85a47}
+}]\index{tktKey@{tktKey}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktKey@{tktKey}}\item[{\em 
+tkt\-Key\label{masks_8hpp_a85a48}
+}]\index{tktDv@{tktDv}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktDv@{tktDv}}\item[{\em 
+tkt\-Dv\label{masks_8hpp_a85a49}
+}]\index{tktDamage@{tktDamage}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktDamage@{tktDamage}}\item[{\em 
+tkt\-Damage\label{masks_8hpp_a85a50}
+}]\index{tktHp@{tktHp}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktHp@{tktHp}}\item[{\em 
+tkt\-Hp\label{masks_8hpp_a85a51}
+}]\index{tktFp@{tktFp}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktFp@{tktFp}}\item[{\em 
+tkt\-Fp\label{masks_8hpp_a85a52}
+}]\index{tktMp@{tktMp}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMp@{tktMp}}\item[{\em 
+tkt\-Mp\label{masks_8hpp_a85a53}
+}]\index{tktElemental@{tktElemental}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktElemental@{tktElemental}}\item[{\em 
+tkt\-Elemental\label{masks_8hpp_a85a54}
+}]\index{tktMaximum@{tktMaximum}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMaximum@{tktMaximum}}\item[{\em 
+tkt\-Maximum\label{masks_8hpp_a85a55}
+}]\index{tktMultiplier@{tktMultiplier}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMultiplier@{tktMultiplier}}\item[{\em 
+tkt\-Multiplier\label{masks_8hpp_a85a56}
+}]\index{tktObstacle@{tktObstacle}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktObstacle@{tktObstacle}}\item[{\em 
+tkt\-Obstacle\label{masks_8hpp_a85a57}
+}]\index{tktBulletproof@{tktBulletproof}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktBulletproof@{tktBulletproof}}\item[{\em 
+tkt\-Bulletproof\label{masks_8hpp_a85a58}
+}]\index{tktVisionproof@{tktVisionproof}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktVisionproof@{tktVisionproof}}\item[{\em 
+tkt\-Visionproof\label{masks_8hpp_a85a59}
+}]\index{tktHeight@{tktHeight}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktHeight@{tktHeight}}\item[{\em 
+tkt\-Height\label{masks_8hpp_a85a60}
+}]\index{tktMainmap@{tktMainmap}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktMainmap@{tktMainmap}}\item[{\em 
+tkt\-Mainmap\label{masks_8hpp_a85a61}
+}]\index{tktUnderground@{tktUnderground}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktUnderground@{tktUnderground}}\item[{\em 
+tkt\-Underground\label{masks_8hpp_a85a62}
+}]\index{tktStrength@{tktStrength}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktStrength@{tktStrength}}\item[{\em 
+tkt\-Strength\label{masks_8hpp_a85a63}
+}]\index{tktConstitution@{tktConstitution}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktConstitution@{tktConstitution}}\item[{\em 
+tkt\-Constitution\label{masks_8hpp_a85a64}
+}]\index{tktDexterity@{tktDexterity}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktDexterity@{tktDexterity}}\item[{\em 
+tkt\-Dexterity\label{masks_8hpp_a85a65}
+}]\index{tktIntelligence@{tktIntelligence}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktIntelligence@{tktIntelligence}}\item[{\em 
+tkt\-Intelligence\label{masks_8hpp_a85a66}
+}]\index{tktCharisma@{tktCharisma}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktCharisma@{tktCharisma}}\item[{\em 
+tkt\-Charisma\label{masks_8hpp_a85a67}
+}]\index{tktWillpower@{tktWillpower}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktWillpower@{tktWillpower}}\item[{\em 
+tkt\-Willpower\label{masks_8hpp_a85a68}
+}]\index{tktLuck@{tktLuck}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktLuck@{tktLuck}}\item[{\em 
+tkt\-Luck\label{masks_8hpp_a85a69}
+}]\index{tktPerception@{tktPerception}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktPerception@{tktPerception}}\item[{\em 
+tkt\-Perception\label{masks_8hpp_a85a70}
+}]\index{tktBeauty@{tktBeauty}!masks.hpp@{masks.hpp}}\index{masks.hpp@{masks.hpp}!tktBeauty@{tktBeauty}}\item[{\em 
+tkt\-Beauty\label{masks_8hpp_a85a71}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Variable Documentation}
+\index{masks.hpp@{masks.hpp}!equipmentTypeMask@{equipmentTypeMask}}
+\index{equipmentTypeMask@{equipmentTypeMask}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int {\bf equipment\-Type\-Mask} = 0x80000}\label{masks_8hpp_a1}
+
+
+\index{masks.hpp@{masks.hpp}!equipmentTypesCount@{equipmentTypesCount}}
+\index{equipmentTypesCount@{equipmentTypesCount}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int {\bf equipment\-Types\-Count} = (int)ett\-Equipment\-Types\-Count \& {\bf token\-Mask}}\label{masks_8hpp_a4}
+
+
+\index{masks.hpp@{masks.hpp}!getTokenTypeMask@{getTokenTypeMask}}
+\index{getTokenTypeMask@{getTokenTypeMask}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int {\bf get\-Token\-Type\-Mask} = 0xffff0000}\label{masks_8hpp_a2}
+
+
+\index{masks.hpp@{masks.hpp}!tokenMask@{tokenMask}}
+\index{tokenMask@{tokenMask}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int {\bf token\-Mask} = 0x0FFFF}\label{masks_8hpp_a3}
+
+
+\index{masks.hpp@{masks.hpp}!tokenTypeMask@{tokenTypeMask}}
+\index{tokenTypeMask@{tokenTypeMask}!masks.hpp@{masks.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int {\bf token\-Type\-Mask} = 0x60000}\label{masks_8hpp_a0}
+
+

@@ -1,0 +1,8 @@
+build/*.o
+build/gerpgr
+log
+lastlog
+*~
+Makefile
+.svn
+savegames

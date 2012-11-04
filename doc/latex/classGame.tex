@@ -1,0 +1,199 @@
+\section{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+{\tt \#include $<$game.hpp$>$}
+
+\subsection*{Public Slots}
+\begin{CompactItemize}
+\item 
+void {\bf on\-Key\-Press} (QKey\-Event $\ast$event)
+\item 
+void {\bf on\-Health\-Change} ()
+\item 
+void {\bf on\-Update\-Square} (int x, int y)
+\item 
+void {\bf on\-Map\-Changed} ()
+\item 
+void {\bf on\-Square\-Double\-Clicked} (int x, int y)
+\item 
+void {\bf on\-Player\-Moved} ()
+\end{CompactItemize}
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+void {\bf repaint\-Stats} ({\bf QStats\-Event} $\ast$event)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Game} ()
+\item 
+virtual {\bf $\sim$Game} ()
+\item 
+void {\bf set\-Engine} ({\bf Engine\-Interface} $\ast$\_\-engine)
+\item 
+void {\bf load} (QString file\-Name)
+\item 
+void {\bf save} (QString file\-Name)
+\item 
+void {\bf move\-Player} (int dx, int dy)
+\item 
+void {\bf player\-Use\-Stairs} (bool is\-Up)
+\item 
+void {\bf wait\-Player} (int time=100)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf clear} ()
+\item 
+void {\bf move\-All\-Monsters} ()
+\item 
+void {\bf remove\-Dead\-Monsters} ()
+\item 
+void {\bf generate\-Ruin} (const {\bf Ruin} \&ruin, {\bf Game\-Map} \&main\-Map)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+{\bf Engine\-Interface} $\ast$ {\bf engine}
+\item 
+bool {\bf loaded}
+\item 
+{\bf Player} {\bf player}
+\item 
+{\bf Game\-Map} $\ast$ {\bf map}
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Game} ()}\label{classGame_a0}
+
+
+\index{Game@{Game}!~Game@{$\sim$Game}}
+\index{~Game@{$\sim$Game}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Game} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classGame_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Game@{Game}!clear@{clear}}
+\index{clear@{clear}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()\hspace{0.3cm}{\tt  [protected]}}\label{classGame_b0}
+
+
+\index{Game@{Game}!generateRuin@{generateRuin}}
+\index{generateRuin@{generateRuin}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void generate\-Ruin (const {\bf Ruin} \& {\em ruin}, {\bf Game\-Map} \& {\em main\-Map})\hspace{0.3cm}{\tt  [protected]}}\label{classGame_b3}
+
+
+\begin{Desc}
+\item[{\bf Todo}]replace with error\end{Desc}
+\begin{Desc}
+\item[{\bf Todo}]replace with error\end{Desc}
+\index{Game@{Game}!load@{load}}
+\index{load@{load}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load (QString {\em file\-Name})}\label{classGame_a3}
+
+
+\index{Game@{Game}!moveAllMonsters@{moveAllMonsters}}
+\index{moveAllMonsters@{moveAllMonsters}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void move\-All\-Monsters ()\hspace{0.3cm}{\tt  [protected]}}\label{classGame_b1}
+
+
+\index{Game@{Game}!movePlayer@{movePlayer}}
+\index{movePlayer@{movePlayer}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void move\-Player (int {\em dx}, int {\em dy})}\label{classGame_a5}
+
+
+very primitive; must be changed \index{Game@{Game}!onHealthChange@{onHealthChange}}
+\index{onHealthChange@{onHealthChange}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Health\-Change ()\hspace{0.3cm}{\tt  [slot]}}\label{classGame_i1}
+
+
+\index{Game@{Game}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Key\-Press (QKey\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [slot]}}\label{classGame_i0}
+
+
+\index{Game@{Game}!onMapChanged@{onMapChanged}}
+\index{onMapChanged@{onMapChanged}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Map\-Changed ()\hspace{0.3cm}{\tt  [slot]}}\label{classGame_i3}
+
+
+\index{Game@{Game}!onPlayerMoved@{onPlayerMoved}}
+\index{onPlayerMoved@{onPlayerMoved}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Player\-Moved ()\hspace{0.3cm}{\tt  [slot]}}\label{classGame_i5}
+
+
+\index{Game@{Game}!onSquareDoubleClicked@{onSquareDoubleClicked}}
+\index{onSquareDoubleClicked@{onSquareDoubleClicked}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Square\-Double\-Clicked (int {\em x}, int {\em y})\hspace{0.3cm}{\tt  [slot]}}\label{classGame_i4}
+
+
+\index{Game@{Game}!onUpdateSquare@{onUpdateSquare}}
+\index{onUpdateSquare@{onUpdateSquare}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Update\-Square (int {\em x}, int {\em y})\hspace{0.3cm}{\tt  [slot]}}\label{classGame_i2}
+
+
+\index{Game@{Game}!playerUseStairs@{playerUseStairs}}
+\index{playerUseStairs@{playerUseStairs}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void player\-Use\-Stairs (bool {\em is\-Up})}\label{classGame_a6}
+
+
+\index{Game@{Game}!removeDeadMonsters@{removeDeadMonsters}}
+\index{removeDeadMonsters@{removeDeadMonsters}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void remove\-Dead\-Monsters ()\hspace{0.3cm}{\tt  [protected]}}\label{classGame_b2}
+
+
+\index{Game@{Game}!repaintStats@{repaintStats}}
+\index{repaintStats@{repaintStats}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void repaint\-Stats ({\bf QStats\-Event} $\ast$ {\em event})\hspace{0.3cm}{\tt  [signal]}}\label{classGame_l0}
+
+
+\index{Game@{Game}!save@{save}}
+\index{save@{save}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void save (QString {\em file\-Name})}\label{classGame_a4}
+
+
+\index{Game@{Game}!setEngine@{setEngine}}
+\index{setEngine@{setEngine}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\-Engine ({\bf Engine\-Interface} $\ast$ {\em \_\-engine})}\label{classGame_a2}
+
+
+\index{Game@{Game}!waitPlayer@{waitPlayer}}
+\index{waitPlayer@{waitPlayer}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void wait\-Player (int {\em time} = {\tt 100})}\label{classGame_a7}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Game@{Game}!engine@{engine}}
+\index{engine@{engine}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Engine\-Interface}$\ast$ {\bf engine}\hspace{0.3cm}{\tt  [protected]}}\label{classGame_p0}
+
+
+\index{Game@{Game}!loaded@{loaded}}
+\index{loaded@{loaded}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf loaded}\hspace{0.3cm}{\tt  [protected]}}\label{classGame_p1}
+
+
+\index{Game@{Game}!map@{map}}
+\index{map@{map}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Map}$\ast$ {\bf map}\hspace{0.3cm}{\tt  [protected]}}\label{classGame_p3}
+
+
+\index{Game@{Game}!player@{player}}
+\index{player@{player}!Game@{Game}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} {\bf player}\hspace{0.3cm}{\tt  [protected]}}\label{classGame_p2}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf game.hpp}\item 
+{\bf game.cpp}\end{CompactItemize}

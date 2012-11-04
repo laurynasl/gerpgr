@@ -1,0 +1,7 @@
+//recipe "Recipe Name" "Outcome Item Name" 3 //and outcome item count
+    // ingredients
+    //item "Item" 2 //count
+    //item "Item2" 1
+    // skill requirements
+    //skill "Some Skill" 6 //difficulty
+//end

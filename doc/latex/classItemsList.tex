@@ -1,0 +1,138 @@
+\section{Items\-List Class Reference}
+\label{classItemsList}\index{ItemsList@{ItemsList}}
+Container and management class for {\bf Item}{\rm (p.\,\pageref{classItem})}.  
+
+
+{\tt \#include $<$itemslist.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Items\-List} ()
+\item 
+{\bf Items\-List} (const {\bf Items\-List} \&other)
+\item 
+{\bf Items\-List} (QList$<$ {\bf Item} $>$ list)
+\item 
+const int {\bf count} () const 
+\item 
+const bool {\bf empty} () const 
+\item 
+const {\bf Item} \& {\bf last} () const 
+\item 
+{\bf Item} {\bf take\-All\-At} (int i)
+\item 
+{\bf Item} {\bf take\-One\-At} (int i)
+\item 
+{\bf Item} {\bf take\-Count\-At} (int i, int count)
+\item 
+void {\bf append} (const {\bf Item} \&item)
+\item 
+void {\bf clear} ()
+\item 
+{\bf Items\-List} \& {\bf operator+=} (const {\bf Items\-List} \&other)
+\item 
+void {\bf append} (const {\bf Items\-List} \&other)
+\item 
+const {\bf Item} \& {\bf operator[$\,$]} (int i) const 
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QList$<$ {\bf Item} $>$ {\bf \_\-list}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Container and management class for {\bf Item}{\rm (p.\,\pageref{classItem})}. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ItemsList@{Items\-List}!ItemsList@{ItemsList}}
+\index{ItemsList@{ItemsList}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Items\-List} ()}\label{classItemsList_a0}
+
+
+\index{ItemsList@{Items\-List}!ItemsList@{ItemsList}}
+\index{ItemsList@{ItemsList}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Items\-List} (const {\bf Items\-List} \& {\em other})}\label{classItemsList_a1}
+
+
+\index{ItemsList@{Items\-List}!ItemsList@{ItemsList}}
+\index{ItemsList@{ItemsList}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Items\-List} (QList$<$ {\bf Item} $>$ {\em list})}\label{classItemsList_a2}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{ItemsList@{Items\-List}!append@{append}}
+\index{append@{append}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void append (const {\bf Items\-List} \& {\em other})}\label{classItemsList_a12}
+
+
+\index{ItemsList@{Items\-List}!append@{append}}
+\index{append@{append}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void append (const {\bf Item} \& {\em item})}\label{classItemsList_a9}
+
+
+\index{ItemsList@{Items\-List}!clear@{clear}}
+\index{clear@{clear}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()}\label{classItemsList_a10}
+
+
+\index{ItemsList@{Items\-List}!count@{count}}
+\index{count@{count}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int count () const}\label{classItemsList_a3}
+
+
+\index{ItemsList@{Items\-List}!empty@{empty}}
+\index{empty@{empty}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const bool empty () const}\label{classItemsList_a4}
+
+
+\index{ItemsList@{Items\-List}!last@{last}}
+\index{last@{last}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const {\bf Item} \& last () const}\label{classItemsList_a5}
+
+
+\index{ItemsList@{Items\-List}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Items\-List} \& operator+= (const {\bf Items\-List} \& {\em other})}\label{classItemsList_a11}
+
+
+\index{ItemsList@{Items\-List}!operator[]@{operator[]}}
+\index{operator[]@{operator[]}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const {\bf Item} \& operator[$\,$] (int {\em i}) const}\label{classItemsList_a13}
+
+
+\index{ItemsList@{Items\-List}!takeAllAt@{takeAllAt}}
+\index{takeAllAt@{takeAllAt}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} take\-All\-At (int {\em i})}\label{classItemsList_a6}
+
+
+\index{ItemsList@{Items\-List}!takeCountAt@{takeCountAt}}
+\index{takeCountAt@{takeCountAt}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} take\-Count\-At (int {\em i}, int {\em count})}\label{classItemsList_a8}
+
+
+\index{ItemsList@{Items\-List}!takeOneAt@{takeOneAt}}
+\index{takeOneAt@{takeOneAt}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} take\-One\-At (int {\em i})}\label{classItemsList_a7}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{ItemsList@{Items\-List}!_list@{\_\-list}}
+\index{_list@{\_\-list}!ItemsList@{Items\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Item}$>$ {\bf \_\-list}\hspace{0.3cm}{\tt  [protected]}}\label{classItemsList_p0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf itemslist.hpp}\item 
+{\bf itemslist.cpp}\end{CompactItemize}

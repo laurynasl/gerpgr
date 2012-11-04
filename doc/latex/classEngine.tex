@@ -1,0 +1,339 @@
+\section{Engine Class Reference}
+\label{classEngine}\index{Engine@{Engine}}
+Default 2D engine with widgets, keyboard, mouse.  
+
+
+{\tt \#include $<$engine.hpp$>$}
+
+Inheritance diagram for Engine::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classEngine}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{CompactItemize}
+\item 
+virtual void {\bf focus} (int x, int y)
+\end{CompactItemize}
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+void {\bf on\-Key\-Press} (QKey\-Event $\ast$event)
+\item 
+void {\bf on\-Repaint\-Stats} ({\bf QStats\-Event} $\ast$event)
+\item 
+void {\bf on\-Square\-Double\-Clicked} (int x, int y)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Engine} ()
+\item 
+virtual {\bf $\sim$Engine} ()
+\item 
+virtual void {\bf change\-Map} ({\bf Game\-Map} $\ast${\bf map})
+\item 
+virtual void {\bf monster\-Moved} ({\bf Monster} \&monster, int dx, int dy)
+\item 
+virtual void {\bf monster\-Moved\-To} ({\bf Monster} \&monster, int old\-X, int old\-Y)
+\item 
+virtual void {\bf repaint\-Stats} ({\bf Monster} \&monster)
+\item 
+virtual void {\bf update\-Square} (int x, int y)
+\item 
+virtual QBit\-Array {\bf get\-Pickup\-Selection} (const {\bf Items\-List} items)
+\item 
+virtual void {\bf manage\-Equipment} ({\bf Monster} $\ast$monster)
+\item 
+virtual void {\bf set\-Square\-Size} (int size)
+\item 
+virtual int {\bf get\-Square\-Size} () const 
+\item 
+virtual bool {\bf ask\-Player\-Yes\-No} (const QString \&caption, const QString \&text)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual void {\bf paint\-Event} (QPaint\-Event $\ast$event)
+\item 
+virtual void {\bf key\-Press\-Event} (QKey\-Event $\ast$event)
+\item 
+virtual void {\bf mouse\-Double\-Click\-Event} (QMouse\-Event $\ast$event)
+\item 
+virtual void {\bf mouse\-Release\-Event} (QMouse\-Event $\ast$event)
+\item 
+virtual void {\bf resize\-Event} (QResize\-Event $\ast$event)
+\item 
+virtual void {\bf resized} ()
+\item 
+{\bf QDiscardable\-Pixmap} $\ast$ {\bf filename\-To\-Pixmap} (const QString filename)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+{\bf Game\-Map} $\ast$ {\bf map}
+\item 
+int {\bf square\-X}
+\item 
+int {\bf square\-Y}
+\begin{CompactList}\small\item\em width of single square, in points \item\end{CompactList}\item 
+int {\bf camera\-X}
+\begin{CompactList}\small\item\em height of single square, in points \item\end{CompactList}\item 
+int {\bf camera\-Y}
+\begin{CompactList}\small\item\em leftmost square still visible in camera \item\end{CompactList}\item 
+int {\bf camera\-Width}
+\begin{CompactList}\small\item\em topmost square still visible in camera \item\end{CompactList}\item 
+int {\bf camera\-Height}
+\begin{CompactList}\small\item\em camera width, in squares \item\end{CompactList}\item 
+QVector$<$ {\bf QDiscardable\-Pixmap} $\ast$ $>$ {\bf background\-Tiles}
+\begin{CompactList}\small\item\em camera height, in squares \item\end{CompactList}\item 
+QVector$<$ {\bf QDiscardable\-Pixmap} $\ast$ $>$ {\bf item\-Tiles}
+\item 
+QVector$<$ {\bf QDiscardable\-Pixmap} $\ast$ $>$ {\bf monster\-Tiles}
+\item 
+QVector$<$ {\bf QDiscardable\-Pixmap} $\ast$ $>$ {\bf object\-Tiles}
+\item 
+QMap$<$ QString, {\bf QDiscardable\-Pixmap} $\ast$ $>$ {\bf pixmaps}
+\item 
+{\bf QPickup\-Dialog} {\bf pickup\-Dialog}
+\item 
+{\bf QEquipment\-Dialog} {\bf equipment\-Dialog}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Default 2D engine with widgets, keyboard, mouse. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Engine} ()}\label{classEngine_a0}
+
+
+\index{Engine@{Engine}!~Engine@{$\sim$Engine}}
+\index{~Engine@{$\sim$Engine}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Engine} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Engine@{Engine}!askPlayerYesNo@{askPlayerYesNo}}
+\index{askPlayerYesNo@{askPlayerYesNo}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool ask\-Player\-Yes\-No (const QString \& {\em caption}, const QString \& {\em text})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a11}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a7})}.\index{Engine@{Engine}!changeMap@{changeMap}}
+\index{changeMap@{changeMap}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void change\-Map ({\bf Game\-Map} $\ast$ {\em map})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a2}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a0})}.\index{Engine@{Engine}!filenameToPixmap@{filenameToPixmap}}
+\index{filenameToPixmap@{filenameToPixmap}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf QDiscardable\-Pixmap} $\ast$ filename\-To\-Pixmap (const QString {\em filename})\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_b6}
+
+
+\index{Engine@{Engine}!focus@{focus}}
+\index{focus@{focus}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void focus (int {\em x}, int {\em y})\hspace{0.3cm}{\tt  [virtual, slot]}}\label{classEngine_i0}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a8})}.\index{Engine@{Engine}!getPickupSelection@{getPickupSelection}}
+\index{getPickupSelection@{getPickupSelection}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QBit\-Array get\-Pickup\-Selection (const {\bf Items\-List} {\em items})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a7}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a5})}.\index{Engine@{Engine}!getSquareSize@{getSquareSize}}
+\index{getSquareSize@{getSquareSize}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\-Square\-Size () const\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a10}
+
+
+\begin{Desc}
+\item[{\bf Todo}]but what about square\-Y?\end{Desc}
+\index{Engine@{Engine}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void key\-Press\-Event (QKey\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classEngine_b1}
+
+
+\index{Engine@{Engine}!manageEquipment@{manageEquipment}}
+\index{manageEquipment@{manageEquipment}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void manage\-Equipment ({\bf Monster} $\ast$ {\em monster})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a8}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a6})}.\index{Engine@{Engine}!monsterMoved@{monsterMoved}}
+\index{monsterMoved@{monsterMoved}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void monster\-Moved ({\bf Monster} \& {\em monster}, int {\em dx}, int {\em dy})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a3}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a1})}.\index{Engine@{Engine}!monsterMovedTo@{monsterMovedTo}}
+\index{monsterMovedTo@{monsterMovedTo}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void monster\-Moved\-To ({\bf Monster} \& {\em monster}, int {\em old\-X}, int {\em old\-Y})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a4}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a2})}.\index{Engine@{Engine}!mouseDoubleClickEvent@{mouseDoubleClickEvent}}
+\index{mouseDoubleClickEvent@{mouseDoubleClickEvent}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void mouse\-Double\-Click\-Event (QMouse\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classEngine_b2}
+
+
+\index{Engine@{Engine}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void mouse\-Release\-Event (QMouse\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classEngine_b3}
+
+
+\index{Engine@{Engine}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Key\-Press (QKey\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [signal]}}\label{classEngine_l0}
+
+
+\index{Engine@{Engine}!onRepaintStats@{onRepaintStats}}
+\index{onRepaintStats@{onRepaintStats}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Repaint\-Stats ({\bf QStats\-Event} $\ast$ {\em event})\hspace{0.3cm}{\tt  [signal]}}\label{classEngine_l1}
+
+
+\index{Engine@{Engine}!onSquareDoubleClicked@{onSquareDoubleClicked}}
+\index{onSquareDoubleClicked@{onSquareDoubleClicked}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Square\-Double\-Clicked (int {\em x}, int {\em y})\hspace{0.3cm}{\tt  [signal]}}\label{classEngine_l2}
+
+
+\index{Engine@{Engine}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void paint\-Event (QPaint\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classEngine_b0}
+
+
+\index{Engine@{Engine}!repaintStats@{repaintStats}}
+\index{repaintStats@{repaintStats}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void repaint\-Stats ({\bf Monster} \& {\em monster})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a5}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a3})}.\index{Engine@{Engine}!resized@{resized}}
+\index{resized@{resized}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void resized ()\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classEngine_b5}
+
+
+\index{Engine@{Engine}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void resize\-Event (QResize\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classEngine_b4}
+
+
+\index{Engine@{Engine}!setSquareSize@{setSquareSize}}
+\index{setSquareSize@{setSquareSize}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\-Square\-Size (int {\em size})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a9}
+
+
+\index{Engine@{Engine}!updateSquare@{updateSquare}}
+\index{updateSquare@{updateSquare}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void update\-Square (int {\em x}, int {\em y})\hspace{0.3cm}{\tt  [virtual]}}\label{classEngine_a6}
+
+
+
+
+Implements {\bf Engine\-Interface} {\rm (p.\,\pageref{classEngineInterface_a4})}.
+
+\subsection{Member Data Documentation}
+\index{Engine@{Engine}!backgroundTiles@{backgroundTiles}}
+\index{backgroundTiles@{backgroundTiles}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QVector$<${\bf QDiscardable\-Pixmap}$\ast$$>$ {\bf background\-Tiles}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p7}
+
+
+camera height, in squares 
+
+\index{Engine@{Engine}!cameraHeight@{cameraHeight}}
+\index{cameraHeight@{cameraHeight}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf camera\-Height}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p6}
+
+
+camera width, in squares 
+
+\index{Engine@{Engine}!cameraWidth@{cameraWidth}}
+\index{cameraWidth@{cameraWidth}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf camera\-Width}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p5}
+
+
+topmost square still visible in camera 
+
+\index{Engine@{Engine}!cameraX@{cameraX}}
+\index{cameraX@{cameraX}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf camera\-X}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p3}
+
+
+height of single square, in points 
+
+\index{Engine@{Engine}!cameraY@{cameraY}}
+\index{cameraY@{cameraY}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf camera\-Y}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p4}
+
+
+leftmost square still visible in camera 
+
+\index{Engine@{Engine}!equipmentDialog@{equipmentDialog}}
+\index{equipmentDialog@{equipmentDialog}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf QEquipment\-Dialog} {\bf equipment\-Dialog}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p13}
+
+
+\index{Engine@{Engine}!itemTiles@{itemTiles}}
+\index{itemTiles@{itemTiles}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QVector$<${\bf QDiscardable\-Pixmap}$\ast$$>$ {\bf item\-Tiles}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p8}
+
+
+\index{Engine@{Engine}!map@{map}}
+\index{map@{map}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Map}$\ast$ {\bf map}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p0}
+
+
+\index{Engine@{Engine}!monsterTiles@{monsterTiles}}
+\index{monsterTiles@{monsterTiles}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QVector$<${\bf QDiscardable\-Pixmap}$\ast$$>$ {\bf monster\-Tiles}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p9}
+
+
+\index{Engine@{Engine}!objectTiles@{objectTiles}}
+\index{objectTiles@{objectTiles}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QVector$<${\bf QDiscardable\-Pixmap}$\ast$$>$ {\bf object\-Tiles}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p10}
+
+
+\index{Engine@{Engine}!pickupDialog@{pickupDialog}}
+\index{pickupDialog@{pickupDialog}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf QPickup\-Dialog} {\bf pickup\-Dialog}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p12}
+
+
+\index{Engine@{Engine}!pixmaps@{pixmaps}}
+\index{pixmaps@{pixmaps}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,{\bf QDiscardable\-Pixmap}$\ast$$>$ {\bf pixmaps}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p11}
+
+
+\index{Engine@{Engine}!squareX@{squareX}}
+\index{squareX@{squareX}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf square\-X}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p1}
+
+
+\index{Engine@{Engine}!squareY@{squareY}}
+\index{squareY@{squareY}!Engine@{Engine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf square\-Y}\hspace{0.3cm}{\tt  [protected]}}\label{classEngine_p2}
+
+
+width of single square, in points 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf engine.hpp}\item 
+{\bf engine.cpp}\end{CompactItemize}

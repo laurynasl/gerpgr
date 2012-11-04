@@ -1,0 +1,46 @@
+Monster::target saving/loading
+various elemental damage types
+ability to drop items
+shields
+other armor and accessories
+`Testable` interface, various tests for errors, lacks of resources
+
+Current task:
+simple maps generator
+
+Changelog:
+
+20060912:
+fixed bug causing segfault when loading games without maps.
+added game/world.{c,h}pp.
+
+20060910:
+camera for engine - ability to focus to (player) for big maps.
+bulletproof, visionproof attributes for background.
+removed no longer necessary game/tiles.hpp
+
+20060901-20060908:
+finished architectural changes, hosted on sourceforge.net svn repository, renamed to Generated and Evolving RPG/Roguelike (gerpgr)
+doxygen-genetated documentation
+
+20060831:
+`TriggerPlayer` class - activated only and always for player.
+
+20060830:
+travelling between maps using new ActionTravel (trigger action) class. for this created Maps singleton... `virtual bool Monster::isMonster()` (player isn't),
+finally removed `GameMap::allMonsters`. Cleanup is allways good. Funny bug while
+debugging teleport allways caused death. Pioneers die... currently only player
+can teleport
+
+20060829:
+correct trigger saving. CoordinatesList class. more STL objects changed into Qt objects.
+item transformation bug when fighting with two weapons. I actually didn't find it, I simply made many methods const...
+primitive obstacles
+
+20060828: set pixmap size.
+dead monster drops all it's items.
+maps can be accessed by name easier
+ItemsList instead of QList<Item>
+stackable items, items with charges, (un)equipping methods suitable for items which stack
+
+20060826: engine's pixmaps list by file name. avoids duplicates, all pixmaps in one list

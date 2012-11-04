@@ -1,0 +1,166 @@
+\section{World Class Reference}
+\label{classWorld}\index{World@{World}}
+World contains objects which are to be used to generate maps.  
+
+
+{\tt \#include $<$world.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf World} ()
+\item 
+virtual {\bf $\sim$World} ()
+\item 
+void {\bf load} ({\bf Parser} \&parser, bool generate=false)
+\item 
+void {\bf save} (ofstream \&file) const 
+\item 
+const QVector$<$ QVector$<$ float $>$ $>$ \& {\bf height\-Map} () const 
+\item 
+const QList$<$ {\bf Ruin} $>$ {\bf ruins} () const 
+\item 
+const QString {\bf name} () const 
+\item 
+const int {\bf width} () const 
+\item 
+const int {\bf height} () const 
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf generate\-Height\-Map} ()
+\item 
+void {\bf clear} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QString {\bf \_\-name}
+\item 
+int {\bf \_\-width}
+\item 
+int {\bf \_\-height}
+\item 
+QList$<$ {\bf Height\-Flag} $>$ {\bf \_\-height\-Flags}
+\item 
+QVector$<$ QVector$<$ float $>$ $>$ {\bf \_\-height\-Map}
+\item 
+int {\bf \_\-initial\-Z}
+\item 
+QList$<$ {\bf Ruin} $>$ {\bf \_\-ruins}
+\begin{CompactList}\small\item\em initial height for \_\-height\-Map \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+World contains objects which are to be used to generate maps. 
+
+Height map can be used to generate mainmap, to fill negative height areas with water. So, there should be stored mountains, rivers, forests, swamps, vulcanos, lakes, seas, oceans, villages, roads, ruins, resources
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf World} ()}\label{classWorld_a0}
+
+
+\index{World@{World}!~World@{$\sim$World}}
+\index{~World@{$\sim$World}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf World} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classWorld_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{World@{World}!clear@{clear}}
+\index{clear@{clear}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_b1}
+
+
+\index{World@{World}!generateHeightMap@{generateHeightMap}}
+\index{generateHeightMap@{generateHeightMap}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void generate\-Height\-Map ()\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_b0}
+
+
+\index{World@{World}!height@{height}}
+\index{height@{height}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int height () const}\label{classWorld_a8}
+
+
+\index{World@{World}!heightMap@{heightMap}}
+\index{heightMap@{heightMap}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QVector$<$ QVector$<$ float $>$ $>$ \& height\-Map () const}\label{classWorld_a4}
+
+
+\index{World@{World}!load@{load}}
+\index{load@{load}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load ({\bf Parser} \& {\em parser}, bool {\em generate} = {\tt false})}\label{classWorld_a2}
+
+
+in case water squares will be used for some objects, this must be changed: \index{World@{World}!name@{name}}
+\index{name@{name}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QString name () const}\label{classWorld_a6}
+
+
+\index{World@{World}!ruins@{ruins}}
+\index{ruins@{ruins}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QList$<$ {\bf Ruin} $>$ ruins () const}\label{classWorld_a5}
+
+
+\index{World@{World}!save@{save}}
+\index{save@{save}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void save (ofstream \& {\em file}) const}\label{classWorld_a3}
+
+
+\index{World@{World}!width@{width}}
+\index{width@{width}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int width () const}\label{classWorld_a7}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{World@{World}!_height@{\_\-height}}
+\index{_height@{\_\-height}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-height}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p2}
+
+
+\index{World@{World}!_heightFlags@{\_\-heightFlags}}
+\index{_heightFlags@{\_\-heightFlags}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Height\-Flag}$>$ {\bf \_\-height\-Flags}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p3}
+
+
+\index{World@{World}!_heightMap@{\_\-heightMap}}
+\index{_heightMap@{\_\-heightMap}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QVector$<$QVector$<$float$>$ $>$ {\bf \_\-height\-Map}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p4}
+
+
+\index{World@{World}!_initialZ@{\_\-initialZ}}
+\index{_initialZ@{\_\-initialZ}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-initial\-Z}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p5}
+
+
+\index{World@{World}!_name@{\_\-name}}
+\index{_name@{\_\-name}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString {\bf \_\-name}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p0}
+
+
+\index{World@{World}!_ruins@{\_\-ruins}}
+\index{_ruins@{\_\-ruins}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Ruin}$>$ {\bf \_\-ruins}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p6}
+
+
+initial height for \_\-height\-Map 
+
+\index{World@{World}!_width@{\_\-width}}
+\index{_width@{\_\-width}!World@{World}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-width}\hspace{0.3cm}{\tt  [protected]}}\label{classWorld_p1}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf world.hpp}\item 
+{\bf world.cpp}\end{CompactItemize}

@@ -1,0 +1,216 @@
+\section{QGUIWidget Class Reference}
+\label{classQGUIWidget}\index{QGUIWidget@{QGUIWidget}}
+{\tt \#include $<$QGUIWidget.hpp$>$}
+
+\subsection*{Public Slots}
+\begin{CompactItemize}
+\item 
+void {\bf new\-Game\-Clicked} ()
+\item 
+void {\bf load\-Game\-Clicked} ()
+\item 
+void {\bf save\-Game\-Clicked} ()
+\item 
+void {\bf repaint\-Stats} ({\bf QStats\-Event} $\ast$event)
+\item 
+void {\bf change\-Square\-Size} ()
+\end{CompactItemize}
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+void {\bf signal\-New\-Game} ()
+\item 
+void {\bf on\-Key\-Press} (QKey\-Event $\ast$event)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QGUIWidget} ()
+\item 
+{\bf $\sim$QGUIWidget} ()
+\item 
+{\bf Engine} $\ast$ {\bf get\-Engine\-Widget} ()
+\item 
+void {\bf set\-Game} ({\bf Game} $\ast$\_\-game)
+\item 
+void {\bf connect\-Signals\-To\-Slots} ()
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual void {\bf key\-Press\-Event} (QKey\-Event $\ast$event)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QLabel $\ast$ {\bf value\-Life}
+\item 
+QLabel $\ast$ {\bf value\-Mana}
+\item 
+QLabel $\ast$ {\bf value\-Fatique}
+\item 
+{\bf Engine} $\ast$ {\bf engine}
+\item 
+QPush\-Button $\ast$ {\bf new\-Game\-Button}
+\item 
+QPush\-Button $\ast$ {\bf save\-Button}
+\item 
+QPush\-Button $\ast$ {\bf load\-Button}
+\item 
+QError\-Message $\ast$ {\bf error\-Message}
+\item 
+{\bf Game} $\ast$ {\bf game}
+\item 
+QWidget $\ast$ {\bf central\-Widget}
+\item 
+QMenu $\ast$ {\bf file\-Menu}
+\item 
+QMenu $\ast$ {\bf view\-Menu}
+\item 
+QAction $\ast$ {\bf square\-Size\-Action}
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QGUIWidget@{QGUIWidget}!QGUIWidget@{QGUIWidget}}
+\index{QGUIWidget@{QGUIWidget}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf QGUIWidget} ()}\label{classQGUIWidget_a0}
+
+
+\index{QGUIWidget@{QGUIWidget}!~QGUIWidget@{$\sim$QGUIWidget}}
+\index{~QGUIWidget@{$\sim$QGUIWidget}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf QGUIWidget} ()}\label{classQGUIWidget_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QGUIWidget@{QGUIWidget}!changeSquareSize@{changeSquareSize}}
+\index{changeSquareSize@{changeSquareSize}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void change\-Square\-Size ()\hspace{0.3cm}{\tt  [slot]}}\label{classQGUIWidget_i4}
+
+
+\index{QGUIWidget@{QGUIWidget}!connectSignalsToSlots@{connectSignalsToSlots}}
+\index{connectSignalsToSlots@{connectSignalsToSlots}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void connect\-Signals\-To\-Slots ()}\label{classQGUIWidget_a4}
+
+
+\index{QGUIWidget@{QGUIWidget}!getEngineWidget@{getEngineWidget}}
+\index{getEngineWidget@{getEngineWidget}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Engine}$\ast$ get\-Engine\-Widget ()\hspace{0.3cm}{\tt  [inline]}}\label{classQGUIWidget_a2}
+
+
+\index{QGUIWidget@{QGUIWidget}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void key\-Press\-Event (QKey\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classQGUIWidget_b0}
+
+
+\index{QGUIWidget@{QGUIWidget}!loadGameClicked@{loadGameClicked}}
+\index{loadGameClicked@{loadGameClicked}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load\-Game\-Clicked ()\hspace{0.3cm}{\tt  [slot]}}\label{classQGUIWidget_i1}
+
+
+\index{QGUIWidget@{QGUIWidget}!newGameClicked@{newGameClicked}}
+\index{newGameClicked@{newGameClicked}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void new\-Game\-Clicked ()\hspace{0.3cm}{\tt  [slot]}}\label{classQGUIWidget_i0}
+
+
+\index{QGUIWidget@{QGUIWidget}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void on\-Key\-Press (QKey\-Event $\ast$ {\em event})\hspace{0.3cm}{\tt  [signal]}}\label{classQGUIWidget_l1}
+
+
+\index{QGUIWidget@{QGUIWidget}!repaintStats@{repaintStats}}
+\index{repaintStats@{repaintStats}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void repaint\-Stats ({\bf QStats\-Event} $\ast$ {\em event})\hspace{0.3cm}{\tt  [slot]}}\label{classQGUIWidget_i3}
+
+
+\index{QGUIWidget@{QGUIWidget}!saveGameClicked@{saveGameClicked}}
+\index{saveGameClicked@{saveGameClicked}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void save\-Game\-Clicked ()\hspace{0.3cm}{\tt  [slot]}}\label{classQGUIWidget_i2}
+
+
+\index{QGUIWidget@{QGUIWidget}!setGame@{setGame}}
+\index{setGame@{setGame}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void set\-Game ({\bf Game} $\ast$ {\em \_\-game})}\label{classQGUIWidget_a3}
+
+
+\index{QGUIWidget@{QGUIWidget}!signalNewGame@{signalNewGame}}
+\index{signalNewGame@{signalNewGame}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void signal\-New\-Game ()\hspace{0.3cm}{\tt  [signal]}}\label{classQGUIWidget_l0}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{QGUIWidget@{QGUIWidget}!centralWidget@{centralWidget}}
+\index{centralWidget@{centralWidget}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QWidget$\ast$ {\bf central\-Widget}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p9}
+
+
+\index{QGUIWidget@{QGUIWidget}!engine@{engine}}
+\index{engine@{engine}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Engine}$\ast$ {\bf engine}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p3}
+
+
+\index{QGUIWidget@{QGUIWidget}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QError\-Message$\ast$ {\bf error\-Message}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p7}
+
+
+\index{QGUIWidget@{QGUIWidget}!fileMenu@{fileMenu}}
+\index{fileMenu@{fileMenu}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMenu$\ast$ {\bf file\-Menu}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p10}
+
+
+\index{QGUIWidget@{QGUIWidget}!game@{game}}
+\index{game@{game}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ {\bf game}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p8}
+
+
+\index{QGUIWidget@{QGUIWidget}!loadButton@{loadButton}}
+\index{loadButton@{loadButton}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QPush\-Button$\ast$ {\bf load\-Button}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p6}
+
+
+\index{QGUIWidget@{QGUIWidget}!newGameButton@{newGameButton}}
+\index{newGameButton@{newGameButton}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QPush\-Button$\ast$ {\bf new\-Game\-Button}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p4}
+
+
+\index{QGUIWidget@{QGUIWidget}!saveButton@{saveButton}}
+\index{saveButton@{saveButton}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QPush\-Button$\ast$ {\bf save\-Button}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p5}
+
+
+\index{QGUIWidget@{QGUIWidget}!squareSizeAction@{squareSizeAction}}
+\index{squareSizeAction@{squareSizeAction}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QAction$\ast$ {\bf square\-Size\-Action}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p12}
+
+
+\index{QGUIWidget@{QGUIWidget}!valueFatique@{valueFatique}}
+\index{valueFatique@{valueFatique}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf value\-Fatique}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p2}
+
+
+\index{QGUIWidget@{QGUIWidget}!valueLife@{valueLife}}
+\index{valueLife@{valueLife}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf value\-Life}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p0}
+
+
+\index{QGUIWidget@{QGUIWidget}!valueMana@{valueMana}}
+\index{valueMana@{valueMana}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf value\-Mana}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p1}
+
+
+\index{QGUIWidget@{QGUIWidget}!viewMenu@{viewMenu}}
+\index{viewMenu@{viewMenu}!QGUIWidget@{QGUIWidget}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMenu$\ast$ {\bf view\-Menu}\hspace{0.3cm}{\tt  [protected]}}\label{classQGUIWidget_p11}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf QGUIWidget.hpp}\item 
+{\bf QGUIWidget.cpp}\end{CompactItemize}

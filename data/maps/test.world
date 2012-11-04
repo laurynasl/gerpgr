@@ -1,0 +1,10 @@
+//generate world <name> <minWidth> <maxWidth> <minHeight> <maxHeight> <initialZ>
+generate world "world1" 30 39 30 39 -1000
+    //random height <count> <minZ> <maxZ> <minRange> <maxRange>
+    random height 5 1500 4000 10 15
+    random height 15 1500 3000 3 6
+    random height 15 -1500 -500 3 6
+end //immediately after `end' generate villages, history, map, submaps
+
+//generate player <worldName>
+generate player "world1"

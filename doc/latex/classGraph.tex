@@ -1,0 +1,97 @@
+\section{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+Graph. for getting minimum spanning tree.  
+
+
+{\tt \#include $<$graph.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Graph} ()
+\item 
+{\bf Graph} (const {\bf Graph} \&other)
+\item 
+int {\bf edge\-Weight} (int i, int j) const 
+\begin{CompactList}\small\item\em Weight of an edge between vertices i and j. \item\end{CompactList}\item 
+void {\bf connect} (int i, int j, int aweight)
+\item 
+void {\bf create\-Disconnected\-Graph} (int count)
+\item 
+{\bf Graph} {\bf get\-MST} () const 
+\begin{CompactList}\small\item\em Creates Minimum Spanning Tree using Kruskal's algorithm. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+int {\bf \_\-count}
+\item 
+QVector$<$ QVector$<$ int $>$ $>$ {\bf \_\-weights}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Graph. for getting minimum spanning tree. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} ()}\label{classGraph_a0}
+
+
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} (const {\bf Graph} \& {\em other})}\label{classGraph_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Graph@{Graph}!connect@{connect}}
+\index{connect@{connect}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void connect (int {\em i}, int {\em j}, int {\em aweight})}\label{classGraph_a3}
+
+
+\begin{Desc}
+\item[Returns:]-1, if disconnected \end{Desc}
+\index{Graph@{Graph}!createDisconnectedGraph@{createDisconnectedGraph}}
+\index{createDisconnectedGraph@{createDisconnectedGraph}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void create\-Disconnected\-Graph (int {\em count})}\label{classGraph_a4}
+
+
+\index{Graph@{Graph}!edgeWeight@{edgeWeight}}
+\index{edgeWeight@{edgeWeight}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int edge\-Weight (int {\em i}, int {\em j}) const}\label{classGraph_a2}
+
+
+Weight of an edge between vertices i and j. 
+
+\begin{Desc}
+\item[Returns:]weight. if return value $<$ 0, vertices are disconnected\end{Desc}
+\index{Graph@{Graph}!getMST@{getMST}}
+\index{getMST@{getMST}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} get\-MST () const}\label{classGraph_a5}
+
+
+Creates Minimum Spanning Tree using Kruskal's algorithm. 
+
+then I simply pick a cheapest edge and try to connect vertices of that edge. If vertices both had no color, they are assigned new color. If only one vertex has no color, then it is assigned other vertex's color. If their colors were different, one of the colors is changed into other for whole graph. Otherwise, if their colors were same, connection is aborted. Repeat this until we have no edges left or all vertices are connected.
+
+\subsection{Member Data Documentation}
+\index{Graph@{Graph}!_count@{\_\-count}}
+\index{_count@{\_\-count}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-count}\hspace{0.3cm}{\tt  [protected]}}\label{classGraph_p0}
+
+
+\index{Graph@{Graph}!_weights@{\_\-weights}}
+\index{_weights@{\_\-weights}!Graph@{Graph}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QVector$<$QVector$<$int$>$ $>$ {\bf \_\-weights}\hspace{0.3cm}{\tt  [protected]}}\label{classGraph_p1}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf graph.hpp}\item 
+{\bf graph.cpp}\end{CompactItemize}

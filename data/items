@@ -1,0 +1,131 @@
+item "Sword Prototype"
+    onehanded
+        attack 0, 1 6 0, 1 4 0
+        minstrength 6
+        skill "sword"
+        skill "slashing"
+    end
+    twohanded
+        attack 0, 1 6 0, 1 4 0
+        minstrength 3
+        skill "sword"
+        skill "slashing"
+    end
+    thrown
+        attack -3, 1 6 0, 1 2 0
+        minstrength 8
+        skill "sword"
+        skill "slashing"
+    end
+    prototype
+end
+
+item "Short Sword"
+    like "Sword Prototype"
+    damage fp -1
+end
+
+item "Long Sword"
+    like "Sword Prototype"
+    maximum hp +1
+    minstrength +1
+//     onehanded
+//         attack 0, 1 7 0, 1 4 -1
+//         minstrength 7
+//         skill "sword"
+//         skill "slashing"
+//     end
+//     twohanded
+//         attack 0, 1 7 0, 1 4 -1
+//         minstrength 4
+//         skill "sword"
+//         skill "slashing"
+//     end
+//     thrown
+//         attack -4, 1 7 0, 1 2 -1
+//         minstrength 9
+//         skill "sword"
+//         skill "slashing"
+//     end
+end
+
+item "Great Axe"
+    onehanded
+        attack 0, 1 10 2, 1 5 -1
+        minstrength 13
+        skill "axe"
+        skill "slashing"
+    end
+    twohanded
+        attack 0, 1 10 2, 1 5 -1
+        minstrength 10
+        skill "axe"
+        skill "slashing"
+    end
+    thrown
+        attack -4 1 11 1, 1 3 0
+        minstrength 17
+        skill "axe"
+        skill "slashing"
+    end
+end
+
+item "Sten's Knife"
+    onehanded
+        attack +5, 1 17 0, 1 4 -1
+        minstrength 5
+        skill "knife"
+        skill "slashing"
+    end
+    twohanded
+        attack +5, 1 17 0, 1 4 -1
+        minstrength 2
+        skill "knife"
+        skill "slashing"
+    end
+    thrown
+        attack -2, 1 17 0, 1 2 0
+        minstrength 7
+        skill "knife"
+        skill "slashing"
+    end
+end
+
+item "Nonweapon Prototype"
+    onehanded
+        attack -1, 1 2 -1, 1 2 -1
+        minstrength 1
+    end
+    twohanded
+        attack -1, 1 2 -1, 1 2 -1
+        minstrength 1
+    end
+    thrown
+        attack -1, 1 2 0, 1 2 -1
+        minstrength 1
+    end
+    prototype
+end
+
+item "Key Prototype"
+    like "Nonweapon Prototype"
+    prototype
+    //key "password"
+end
+
+item "Iron Key"
+    like "Key Prototype"
+    key "iron lock"
+end
+
+item "Armor Prototype"
+    like "Nonweapon Prototype"
+    prototype
+    equip_slot armor
+    //dv <int>
+end
+
+item "Leather Armor"
+    like "Armor Prototype"
+    dv 2
+end

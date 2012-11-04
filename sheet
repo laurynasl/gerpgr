@@ -1,0 +1,105 @@
+STRENGTH        melee, carry!, armourer
+CONSTITUTION    hp, hpregen!, fp, fpregen!, stamina
+DEXTERITY       melee, ranged, speed!, dodge!, sneak
+INTELLIGENCE    lockpick, repair, traps, armourer
+CHARIZMA        party!, speech, barter
+WILLPOWER       mp, mpregen!
+LUCK            criticalhit!
+PERCEPTION      ranged, spottrap!, lockpick
+BEAUTY
+
+experience /base attribute:
+    melee       STRENGTH
+    ranged      PERCEPTION
+    spells      WILLPOWER
+    social      CHARIZMA
+    rogueish    DEXTERITY
+    skills      INTELLIGENCE
+
+attack skills:
+melee
+    bashing
+    slashing
+    piercing
+ranged
+    throwing
+    archery
+    firepower
+
+non-attack skills:
+speech
+barter
+lockpick
+repair
+sneak
+traps
+armourer
+stamina
+
+spell families:
+attack
+buffers
+curses
+espionage
+summonning
+necromancy
+
+formulaes:
+maxhp = CONSTITUTION + STRENGTH / 3 + level + melee level
+maxfp = CONSTITUTION + WILLPOWER / 3 + level + ...
+maxmp = WILLPOWER + CHARIZMA / 3 + level + spells level
+
+speed = 100 + DEXTERITY + rogueish level
+
+old to-hit.
+melee_attack_to-hit = STRENGTH + LUCK / 5 + skill
+ranged_attack_to-hit = PERCEPTION + LUCK / 5 + skill
+melee_defense = DEXTERITY + LUCK / 5 + skill
+ranged_defense = DEXTERITY / 2 + PERCEPTION / 2 + LUCK / 5 + skill
+
+to-hit.
+melee_attack_to-hit = (DEXTERITY  + STRENGTH - 20) / 10 + melee + skill
+ranged_attack_to-hit = (PERCEPTION * 2 + DEXTERITY - 30) / 10 + ranged + skill
+melee_defense = DEXTERITY / 3 + armor + melee + skill
+ranged_defense = (DEXTERITY + PERCEPTION) / 3 + (ranged + skill)/2
+
+melee_damage.
+hitpoints = multiplier d(maximum+skill/3) + (STRENGTH-10) / 5
+fatique = multiplier d(maximum+skill/3) + (STRENGTH-10) / 5
+
+unarmed_weapon
+hp: 1d3, fp: 2d3
+
+melee_resistance.
+hitpoints = CONSTITUTION / 10 + armor
+fatique = CONSTITUTION / 5
+
+critical_chance = LUCK + skill : LUCK + skill + LUCK2 + 50
+
+
+***     World generation     ***
+
+world consists of:
+    environment
+        reljef height
+        seismic activity
+        mountains
+        plains
+        ocean
+        sea
+        river
+        lake
+        forest
+        swamp
+        scorched earth
+    faction
+        race
+        village
+        city
+        fortress
+        outpost
+        relations
+        trade route
+        war
+        peace
+        leader

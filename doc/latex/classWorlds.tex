@@ -1,0 +1,111 @@
+\section{Worlds Class Reference}
+\label{classWorlds}\index{Worlds@{Worlds}}
+{\tt \#include $<$worlds.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Worlds} ()
+\item 
+{\bf $\sim$Worlds} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static {\bf Worlds} \& {\bf get\-Instance} ()
+\item 
+static void {\bf add} ({\bf World} $\ast$world)
+\item 
+static void {\bf remove} ({\bf World} $\ast$world)
+\item 
+static {\bf World} $\ast$ {\bf name\-To\-World} (const QString name)
+\item 
+static void {\bf clear} ()
+\item 
+static const QMap$<$ QString, {\bf World} $\ast$ $>$ \& {\bf get\-All\-Worlds} ()
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf init} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QMap$<$ QString, {\bf World} $\ast$ $>$ {\bf worlds}
+\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static {\bf Worlds} $\ast$ {\bf instance} = 0
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Worlds@{Worlds}!Worlds@{Worlds}}
+\index{Worlds@{Worlds}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Worlds} ()}\label{classWorlds_a0}
+
+
+\index{Worlds@{Worlds}!~Worlds@{$\sim$Worlds}}
+\index{~Worlds@{$\sim$Worlds}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Worlds} ()}\label{classWorlds_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Worlds@{Worlds}!add@{add}}
+\index{add@{add}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void add ({\bf World} $\ast$ {\em world})\hspace{0.3cm}{\tt  [static]}}\label{classWorlds_e1}
+
+
+\index{Worlds@{Worlds}!clear@{clear}}
+\index{clear@{clear}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()\hspace{0.3cm}{\tt  [static]}}\label{classWorlds_e4}
+
+
+\index{Worlds@{Worlds}!getAllWorlds@{getAllWorlds}}
+\index{getAllWorlds@{getAllWorlds}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QMap$<$ QString, {\bf World} $\ast$ $>$ \& get\-All\-Worlds ()\hspace{0.3cm}{\tt  [static]}}\label{classWorlds_e5}
+
+
+\index{Worlds@{Worlds}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Worlds} \& get\-Instance ()\hspace{0.3cm}{\tt  [static]}}\label{classWorlds_e0}
+
+
+\index{Worlds@{Worlds}!init@{init}}
+\index{init@{init}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init ()\hspace{0.3cm}{\tt  [protected]}}\label{classWorlds_b0}
+
+
+\index{Worlds@{Worlds}!nameToWorld@{nameToWorld}}
+\index{nameToWorld@{nameToWorld}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf World} $\ast$ name\-To\-World (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classWorlds_e3}
+
+
+\index{Worlds@{Worlds}!remove@{remove}}
+\index{remove@{remove}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void remove ({\bf World} $\ast$ {\em world})\hspace{0.3cm}{\tt  [static]}}\label{classWorlds_e2}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Worlds@{Worlds}!instance@{instance}}
+\index{instance@{instance}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Worlds} $\ast$ {\bf instance} = 0\hspace{0.3cm}{\tt  [static, protected]}}\label{classWorlds_t0}
+
+
+\index{Worlds@{Worlds}!worlds@{worlds}}
+\index{worlds@{worlds}!Worlds@{Worlds}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,{\bf World}$\ast$$>$ {\bf worlds}\hspace{0.3cm}{\tt  [protected]}}\label{classWorlds_p0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf worlds.hpp}\item 
+{\bf worlds.cpp}\end{CompactItemize}

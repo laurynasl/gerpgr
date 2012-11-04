@@ -1,0 +1,119 @@
+\section{Maps Class Reference}
+\label{classMaps}\index{Maps@{Maps}}
+singleton providing maps list  
+
+
+{\tt \#include $<$maps.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Maps} ()
+\item 
+{\bf $\sim$Maps} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static {\bf Maps} \& {\bf get\-Instance} ()
+\item 
+static void {\bf add} ({\bf Game\-Map} $\ast$map)
+\item 
+static void {\bf remove} ({\bf Game\-Map} $\ast$map)
+\item 
+static {\bf Game\-Map} $\ast$ {\bf name\-To\-Map} (const QString name)
+\item 
+static void {\bf clear} ()
+\item 
+static const QMap$<$ QString, {\bf Game\-Map} $\ast$ $>$ \& {\bf get\-All\-Maps} ()
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf init} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QMap$<$ QString, {\bf Game\-Map} $\ast$ $>$ {\bf maps}
+\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static {\bf Maps} $\ast$ {\bf instance} = 0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+singleton providing maps list 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Maps@{Maps}!Maps@{Maps}}
+\index{Maps@{Maps}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Maps} ()}\label{classMaps_a0}
+
+
+\index{Maps@{Maps}!~Maps@{$\sim$Maps}}
+\index{~Maps@{$\sim$Maps}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Maps} ()}\label{classMaps_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Maps@{Maps}!add@{add}}
+\index{add@{add}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void add ({\bf Game\-Map} $\ast$ {\em map})\hspace{0.3cm}{\tt  [static]}}\label{classMaps_e1}
+
+
+\index{Maps@{Maps}!clear@{clear}}
+\index{clear@{clear}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()\hspace{0.3cm}{\tt  [static]}}\label{classMaps_e4}
+
+
+\index{Maps@{Maps}!getAllMaps@{getAllMaps}}
+\index{getAllMaps@{getAllMaps}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QMap$<$ QString, {\bf Game\-Map} $\ast$ $>$ \& get\-All\-Maps ()\hspace{0.3cm}{\tt  [static]}}\label{classMaps_e5}
+
+
+\index{Maps@{Maps}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Maps} \& get\-Instance ()\hspace{0.3cm}{\tt  [static]}}\label{classMaps_e0}
+
+
+\index{Maps@{Maps}!init@{init}}
+\index{init@{init}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init ()\hspace{0.3cm}{\tt  [protected]}}\label{classMaps_b0}
+
+
+\index{Maps@{Maps}!nameToMap@{nameToMap}}
+\index{nameToMap@{nameToMap}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Map} $\ast$ name\-To\-Map (const QString {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classMaps_e3}
+
+
+\index{Maps@{Maps}!remove@{remove}}
+\index{remove@{remove}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void remove ({\bf Game\-Map} $\ast$ {\em map})\hspace{0.3cm}{\tt  [static]}}\label{classMaps_e2}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Maps@{Maps}!instance@{instance}}
+\index{instance@{instance}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Maps} $\ast$ {\bf instance} = 0\hspace{0.3cm}{\tt  [static, protected]}}\label{classMaps_t0}
+
+
+\index{Maps@{Maps}!maps@{maps}}
+\index{maps@{maps}!Maps@{Maps}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<$QString,{\bf Game\-Map}$\ast$$>$ {\bf maps}\hspace{0.3cm}{\tt  [protected]}}\label{classMaps_p0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf maps.hpp}\item 
+{\bf maps.cpp}\end{CompactItemize}

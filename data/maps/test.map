@@ -1,0 +1,65 @@
+// Types description:
+//T  - token
+//Nx - natural number >= x
+//N1 - natural number >= 1
+//N2 - natural number >= 2
+//N  - N0
+//I  - integer
+//F  - float
+//S  - string
+
+//player <S:name> <S:map> <N:X> <N:Y>
+player "Kudlius" "testmap" 1 0
+    //<skill> <F:xp>
+    skill "level" 1
+    skill "unarmed" 2
+    //attributes 9 * <N1:attribute>
+    attributes 10 11 14 13 14 15 16 17 18
+    //health <N1:hp> <I:mp> <N:fp>
+    //health 15 8 5
+    twohands 1 "Short Sword"
+    item 2 "Long Sword"
+    item 2 "Short Sword"
+end
+
+//map <T:name> <N1:width> <N1:height> <T:default tile>
+map "testmap" 20 20 "Grass"
+    //tile <T:name> <N:x> <N:y>
+    //tilesrange <T:name> <N:x> <N:y> <N1:width> <N1:height>
+    tile "HillMedium" 2 7
+    tilesrange "Water" 1 1 1 9
+    tilesrange "UndergroundWall" 10 10 5 5
+    //item <T:itemCLass> <N:x> <N:y>
+    item 1 "Short Sword" 9 9
+    item 1 "Long Sword" 9 9
+    item 1 "Great Axe" 8 8
+    item 1 "Long Sword" 4 4
+    item 1 "Great Axe" 4 4
+    item 1 "Great Axe" 4 4
+    //monster <T:monsterClass> <N:x> <N:y>
+    monster "Blob" 0 0
+        //attributes ...
+        //<skill> <F:xp>
+        //health ...
+        skill "level" 1
+        attributes 3 16 7 1 1 1 9 4 3
+        item 1 "Sten's Knife"
+        twohands 1 "Short Sword"
+        item 1 "Iron Key"
+        item 1 "Leather Armor"
+    end
+    //random monster "Blob" at 0 1
+    trigger question at 0 0 -1 "Do you want to generate some monsters?"
+       random monsters 3 "Blob" in 0 0 20 20 "testmap"
+    end
+    trigger player at 0 9 -1
+        travel "global" at 1 0
+    end
+    //random monsters 3 "Blob" in 0 0 10 10
+end
+
+map "global" 2 1 "Grass"
+    trigger player at 0 0 -1 //question at 0 0 -1 "Do you want to travel to testmap?"
+        travel "testmap" in 0 0 10 10
+    end
+end

@@ -1,0 +1,124 @@
+\section{Item Class Reference}
+\label{classItem}\index{Item@{Item}}
+Single item or a stack of stackable items.  
+
+
+{\tt \#include $<$item.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Item} ()
+\item 
+{\bf Item} (const int item\-Type, int {\bf \_\-count}=1)
+\item 
+{\bf Item} (const {\bf Item} \&other)
+\item 
+{\bf $\sim$Item} ()
+\item 
+const int {\bf type} () const 
+\item 
+const int {\bf count} () const 
+\item 
+const QString {\bf description} () const 
+\item 
+const QString {\bf name} () const 
+\item 
+const bool {\bf can\-Stack\-With} (const {\bf Item} \&other) const 
+\item 
+void {\bf increase\-Count} (int diff)
+\item 
+const bool {\bf stackable} () const 
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+int {\bf \_\-type}
+\item 
+int {\bf \_\-count}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Single item or a stack of stackable items. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} ()}\label{classItem_a0}
+
+
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} (const int {\em item\-Type}, int {\em \_\-count} = {\tt 1})}\label{classItem_a1}
+
+
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} (const {\bf Item} \& {\em other})}\label{classItem_a2}
+
+
+\index{Item@{Item}!~Item@{$\sim$Item}}
+\index{~Item@{$\sim$Item}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Item} ()}\label{classItem_a3}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Item@{Item}!canStackWith@{canStackWith}}
+\index{canStackWith@{canStackWith}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const bool can\-Stack\-With (const {\bf Item} \& {\em other}) const}\label{classItem_a8}
+
+
+\index{Item@{Item}!count@{count}}
+\index{count@{count}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int count () const}\label{classItem_a5}
+
+
+\index{Item@{Item}!description@{description}}
+\index{description@{description}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QString description () const}\label{classItem_a6}
+
+
+\index{Item@{Item}!increaseCount@{increaseCount}}
+\index{increaseCount@{increaseCount}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void increase\-Count (int {\em diff})}\label{classItem_a9}
+
+
+\index{Item@{Item}!name@{name}}
+\index{name@{name}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const QString name () const}\label{classItem_a7}
+
+
+\index{Item@{Item}!stackable@{stackable}}
+\index{stackable@{stackable}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const bool stackable () const}\label{classItem_a10}
+
+
+\index{Item@{Item}!type@{type}}
+\index{type@{type}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int type () const}\label{classItem_a4}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Item@{Item}!_count@{\_\-count}}
+\index{_count@{\_\-count}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-count}\hspace{0.3cm}{\tt  [protected]}}\label{classItem_p1}
+
+
+\index{Item@{Item}!_type@{\_\-type}}
+\index{_type@{\_\-type}!Item@{Item}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-type}\hspace{0.3cm}{\tt  [protected]}}\label{classItem_p0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf item.hpp}\item 
+{\bf item.cpp}\end{CompactItemize}

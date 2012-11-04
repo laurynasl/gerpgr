@@ -1,0 +1,5 @@
+#!/bin/bash
+
+printf "\nLog started\n" >> log
+date >> log
+( qmake gerpgr.pro && make && ./build/gerpgr -style `cat style`) 2>&1 | tee lastlog | tee -a log

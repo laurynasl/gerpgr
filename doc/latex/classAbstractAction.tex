@@ -1,0 +1,66 @@
+\section{Abstract\-Action Class Reference}
+\label{classAbstractAction}\index{AbstractAction@{AbstractAction}}
+Abstract class for all trigger actions.  
+
+
+{\tt \#include $<$abstractaction.hpp$>$}
+
+Inheritance diagram for Abstract\-Action::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classAbstractAction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf $\sim$Abstract\-Action} ()
+\item 
+virtual bool {\bf run} ({\bf Monster} \&monster)=0
+\item 
+virtual void {\bf load} ({\bf Parser} \&parser)=0
+\item 
+virtual void {\bf save} (ofstream \&file)=0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for all trigger actions. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{AbstractAction@{Abstract\-Action}!~AbstractAction@{$\sim$AbstractAction}}
+\index{~AbstractAction@{$\sim$AbstractAction}!AbstractAction@{Abstract\-Action}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual $\sim${\bf Abstract\-Action} ()\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classAbstractAction_a0}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{AbstractAction@{Abstract\-Action}!load@{load}}
+\index{load@{load}!AbstractAction@{Abstract\-Action}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void load ({\bf Parser} \& {\em parser})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classAbstractAction_a2}
+
+
+
+
+Implemented in {\bf Action\-Random} {\rm (p.\,\pageref{classActionRandom_a2})}, and {\bf Action\-Travel} {\rm (p.\,\pageref{classActionTravel_a2})}.\index{AbstractAction@{Abstract\-Action}!run@{run}}
+\index{run@{run}!AbstractAction@{Abstract\-Action}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual bool run ({\bf Monster} \& {\em monster})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classAbstractAction_a1}
+
+
+
+
+Implemented in {\bf Action\-Random} {\rm (p.\,\pageref{classActionRandom_a1})}, and {\bf Action\-Travel} {\rm (p.\,\pageref{classActionTravel_a1})}.\index{AbstractAction@{Abstract\-Action}!save@{save}}
+\index{save@{save}!AbstractAction@{Abstract\-Action}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void save (ofstream \& {\em file})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classAbstractAction_a3}
+
+
+
+
+Implemented in {\bf Action\-Random} {\rm (p.\,\pageref{classActionRandom_a3})}, and {\bf Action\-Travel} {\rm (p.\,\pageref{classActionTravel_a3})}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf abstractaction.hpp}\end{CompactItemize}

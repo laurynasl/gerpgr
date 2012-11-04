@@ -1,0 +1,124 @@
+\section{Coordinates\-List Class Reference}
+\label{classCoordinatesList}\index{CoordinatesList@{CoordinatesList}}
+Container and management class for {\bf Coordinate}{\rm (p.\,\pageref{classCoordinate})}.  
+
+
+{\tt \#include $<$coordinateslist.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Coordinates\-List} ()
+\item 
+{\bf Coordinates\-List} (const {\bf Coordinates\-List} \&other)
+\item 
+void {\bf append} (int x, int y, int w=1, int h=1)
+\item 
+void {\bf append} (const {\bf Coordinate} \&coordinate)
+\item 
+void {\bf load\-Full} ({\bf Parser} \&parser)
+\item 
+void {\bf load\-At} ({\bf Parser} \&parser)
+\item 
+void {\bf load\-In} ({\bf Parser} \&parser)
+\item 
+void {\bf load} ({\bf Parser} \&parser)
+\item 
+const void {\bf save} (ofstream \&file) const 
+\item 
+QList$<$ {\bf Coordinate} $>$ {\bf get\-Coordinates} () const 
+\item 
+QList$<$ {\bf QInts\-Pair} $>$ {\bf get\-Points} () const 
+\item 
+bool {\bf operator$<$=} (const {\bf Coordinate} \&other) const 
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QList$<$ {\bf Coordinate} $>$ {\bf list}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Container and management class for {\bf Coordinate}{\rm (p.\,\pageref{classCoordinate})}. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{CoordinatesList@{Coordinates\-List}!CoordinatesList@{CoordinatesList}}
+\index{CoordinatesList@{CoordinatesList}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordinates\-List} ()}\label{classCoordinatesList_a0}
+
+
+\index{CoordinatesList@{Coordinates\-List}!CoordinatesList@{CoordinatesList}}
+\index{CoordinatesList@{CoordinatesList}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordinates\-List} (const {\bf Coordinates\-List} \& {\em other})}\label{classCoordinatesList_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{CoordinatesList@{Coordinates\-List}!append@{append}}
+\index{append@{append}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void append (const {\bf Coordinate} \& {\em coordinate})}\label{classCoordinatesList_a3}
+
+
+\index{CoordinatesList@{Coordinates\-List}!append@{append}}
+\index{append@{append}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void append (int {\em x}, int {\em y}, int {\em w} = {\tt 1}, int {\em h} = {\tt 1})}\label{classCoordinatesList_a2}
+
+
+\index{CoordinatesList@{Coordinates\-List}!getCoordinates@{getCoordinates}}
+\index{getCoordinates@{getCoordinates}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<$ {\bf Coordinate} $>$ get\-Coordinates () const}\label{classCoordinatesList_a9}
+
+
+\index{CoordinatesList@{Coordinates\-List}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<$ {\bf QInts\-Pair} $>$ get\-Points () const}\label{classCoordinatesList_a10}
+
+
+\index{CoordinatesList@{Coordinates\-List}!load@{load}}
+\index{load@{load}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load ({\bf Parser} \& {\em parser})}\label{classCoordinatesList_a7}
+
+
+\index{CoordinatesList@{Coordinates\-List}!loadAt@{loadAt}}
+\index{loadAt@{loadAt}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load\-At ({\bf Parser} \& {\em parser})}\label{classCoordinatesList_a5}
+
+
+\index{CoordinatesList@{Coordinates\-List}!loadFull@{loadFull}}
+\index{loadFull@{loadFull}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load\-Full ({\bf Parser} \& {\em parser})}\label{classCoordinatesList_a4}
+
+
+\index{CoordinatesList@{Coordinates\-List}!loadIn@{loadIn}}
+\index{loadIn@{loadIn}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load\-In ({\bf Parser} \& {\em parser})}\label{classCoordinatesList_a6}
+
+
+\index{CoordinatesList@{Coordinates\-List}!operator<=@{operator$<$=}}
+\index{operator<=@{operator$<$=}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (const {\bf Coordinate} \& {\em other}) const}\label{classCoordinatesList_a11}
+
+
+\index{CoordinatesList@{Coordinates\-List}!save@{save}}
+\index{save@{save}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const void save (ofstream \& {\em file}) const}\label{classCoordinatesList_a8}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{CoordinatesList@{Coordinates\-List}!list@{list}}
+\index{list@{list}!CoordinatesList@{Coordinates\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Coordinate}$>$ {\bf list}\hspace{0.3cm}{\tt  [protected]}}\label{classCoordinatesList_p0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf coordinateslist.hpp}\item 
+{\bf coordinateslist.cpp}\end{CompactItemize}

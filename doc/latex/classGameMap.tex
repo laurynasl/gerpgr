@@ -1,0 +1,336 @@
+\section{Game\-Map Class Reference}
+\label{classGameMap}\index{GameMap@{GameMap}}
+Playable map, containing squares, monsters, items, triggers, objects.  
+
+
+{\tt \#include $<$gamemap.hpp$>$}
+
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+void {\bf square\-Changed} (int x, int y)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf insert\-Monster} ({\bf Monster} $\ast$monster)
+\item 
+void {\bf remove\-Monster} ({\bf Monster} $\ast$monster)
+\item 
+{\bf Game\-Map} ()
+\item 
+void {\bf load} ({\bf Parser} \&parser)
+\item 
+virtual {\bf $\sim$Game\-Map} ()
+\item 
+int {\bf width} ()
+\item 
+int {\bf height} ()
+\item 
+int {\bf background\-At} (int x, int y)
+\item 
+{\bf Map\-Square} $\ast$ {\bf square\-At} (int x, int y)
+\item 
+void {\bf save} (ofstream \&file)
+\item 
+QList$<$ {\bf Trigger} $\ast$ $>$ {\bf triggers\-At} (int x, int y)
+\item 
+QString {\bf get\-Name} ()
+\item 
+bool {\bf contains\-Monster} ({\bf Monster} $\ast$monster)
+\item 
+void {\bf square\-Change} (int x, int y)
+\item 
+void {\bf monster\-Moved} ({\bf Monster} \&monster, int old\-X, int old\-Y)
+\item 
+bool {\bf can\-Accept\-Monster\-At} (int x, int y, const {\bf Monster} \&monster)
+\item 
+void {\bf generate} (const {\bf World} \&world)
+\item 
+void {\bf generate\-Dungeon} (QString {\bf name}, int awidth, int aheight, int \&startx, int \&starty, int \&endx, int \&endy, int background, int wall)
+\item 
+bool {\bf create\-Stairs} (int stairx, int stairy, bool is\-Up, QString map\-Name, int x, int y, int tile=-1)
+\item 
+const {\bf Stair} $\ast$ {\bf stairs\-At} (int x, int y, bool is\-Up) const 
+\item 
+bool {\bf are\-Objects\-At} (int x, int y) const 
+\item 
+QList$<$ {\bf Map\-Object} $\ast$ $>$ {\bf objects\-At} (int x, int y) const 
+\item 
+bool {\bf create\-Door} (int x, int y, bool is\-Closed, int closed\-Tile, int open\-Tile)
+\item 
+bool {\bf are\-Closed\-Doors\-At} (int x, int y)
+\item 
+bool {\bf open\-Door} (int x, int y)
+\item 
+bool {\bf close\-Door} (int x, int y)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf clear} ()
+\item 
+void {\bf init\-Squares} (int {\bf default\-Tile})
+\item 
+void {\bf insert\-Trigger} (int x, int y, {\bf Trigger} $\ast$trigger)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+int {\bf \_\-height}
+\item 
+int {\bf \_\-width}
+\item 
+QString {\bf name}
+\item 
+int {\bf default\-Tile}
+\item 
+{\bf Map\-Square} $\ast$ {\bf squares}
+\item 
+QSet$<$ {\bf Monster} $\ast$ $>$ {\bf monsters}
+\item 
+QList$<$ {\bf Trigger} $\ast$ $>$ {\bf triggers}
+\item 
+QMulti\-Map$<$ {\bf QInts\-Pair}, {\bf Trigger} $\ast$ $>$ {\bf triggers\-Map}
+\item 
+QMulti\-Map$<$ {\bf QInts\-Pair}, {\bf Map\-Object} $\ast$ $>$ {\bf objects}
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class {\bf Abstract\-Action}
+\item 
+class {\bf Monster}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Playable map, containing squares, monsters, items, triggers, objects. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{GameMap@{Game\-Map}!GameMap@{GameMap}}
+\index{GameMap@{GameMap}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Map} ()}\label{classGameMap_a2}
+
+
+\index{GameMap@{Game\-Map}!~GameMap@{$\sim$GameMap}}
+\index{~GameMap@{$\sim$GameMap}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Game\-Map} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classGameMap_a4}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{GameMap@{Game\-Map}!areClosedDoorsAt@{areClosedDoorsAt}}
+\index{areClosedDoorsAt@{areClosedDoorsAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool are\-Closed\-Doors\-At (int {\em x}, int {\em y})}\label{classGameMap_a23}
+
+
+\index{GameMap@{Game\-Map}!areObjectsAt@{areObjectsAt}}
+\index{areObjectsAt@{areObjectsAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool are\-Objects\-At (int {\em x}, int {\em y}) const}\label{classGameMap_a20}
+
+
+\index{GameMap@{Game\-Map}!backgroundAt@{backgroundAt}}
+\index{backgroundAt@{backgroundAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int background\-At (int {\em x}, int {\em y})}\label{classGameMap_a7}
+
+
+\index{GameMap@{Game\-Map}!canAcceptMonsterAt@{canAcceptMonsterAt}}
+\index{canAcceptMonsterAt@{canAcceptMonsterAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool can\-Accept\-Monster\-At (int {\em x}, int {\em y}, const {\bf Monster} \& {\em monster})}\label{classGameMap_a15}
+
+
+\index{GameMap@{Game\-Map}!clear@{clear}}
+\index{clear@{clear}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_b0}
+
+
+\index{GameMap@{Game\-Map}!closeDoor@{closeDoor}}
+\index{closeDoor@{closeDoor}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool close\-Door (int {\em x}, int {\em y})}\label{classGameMap_a25}
+
+
+\index{GameMap@{Game\-Map}!containsMonster@{containsMonster}}
+\index{containsMonster@{containsMonster}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool contains\-Monster ({\bf Monster} $\ast$ {\em monster})}\label{classGameMap_a12}
+
+
+\index{GameMap@{Game\-Map}!createDoor@{createDoor}}
+\index{createDoor@{createDoor}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool create\-Door (int {\em x}, int {\em y}, bool {\em is\-Closed}, int {\em closed\-Tile}, int {\em open\-Tile})}\label{classGameMap_a22}
+
+
+\index{GameMap@{Game\-Map}!createStairs@{createStairs}}
+\index{createStairs@{createStairs}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool create\-Stairs (int {\em stairx}, int {\em stairy}, bool {\em is\-Up}, QString {\em map\-Name}, int {\em x}, int {\em y}, int {\em tile} = {\tt -1})}\label{classGameMap_a18}
+
+
+\index{GameMap@{Game\-Map}!generate@{generate}}
+\index{generate@{generate}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void generate (const {\bf World} \& {\em world})}\label{classGameMap_a16}
+
+
+\begin{Desc}
+\item[{\bf Todo}]replace with error\end{Desc}
+\index{GameMap@{Game\-Map}!generateDungeon@{generateDungeon}}
+\index{generateDungeon@{generateDungeon}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void generate\-Dungeon (QString {\em name}, int {\em awidth}, int {\em aheight}, int \& {\em startx}, int \& {\em starty}, int \& {\em endx}, int \& {\em endy}, int {\em background}, int {\em wall})}\label{classGameMap_a17}
+
+
+room sizes are including walls, so in fact they are smaller by 2
+
+lets say that rooms will occupy 25\% of whole space \index{GameMap@{Game\-Map}!getName@{getName}}
+\index{getName@{getName}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString get\-Name ()}\label{classGameMap_a11}
+
+
+\index{GameMap@{Game\-Map}!height@{height}}
+\index{height@{height}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int height ()}\label{classGameMap_a6}
+
+
+\index{GameMap@{Game\-Map}!initSquares@{initSquares}}
+\index{initSquares@{initSquares}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\-Squares (int {\em default\-Tile})\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_b1}
+
+
+\index{GameMap@{Game\-Map}!insertMonster@{insertMonster}}
+\index{insertMonster@{insertMonster}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void insert\-Monster ({\bf Monster} $\ast$ {\em monster})}\label{classGameMap_a0}
+
+
+\index{GameMap@{Game\-Map}!insertTrigger@{insertTrigger}}
+\index{insertTrigger@{insertTrigger}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void insert\-Trigger (int {\em x}, int {\em y}, {\bf Trigger} $\ast$ {\em trigger})\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_b2}
+
+
+\index{GameMap@{Game\-Map}!load@{load}}
+\index{load@{load}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load ({\bf Parser} \& {\em parser})}\label{classGameMap_a3}
+
+
+\index{GameMap@{Game\-Map}!monsterMoved@{monsterMoved}}
+\index{monsterMoved@{monsterMoved}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void monster\-Moved ({\bf Monster} \& {\em monster}, int {\em old\-X}, int {\em old\-Y})}\label{classGameMap_a14}
+
+
+\index{GameMap@{Game\-Map}!objectsAt@{objectsAt}}
+\index{objectsAt@{objectsAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<$ {\bf Map\-Object} $\ast$ $>$ objects\-At (int {\em x}, int {\em y}) const}\label{classGameMap_a21}
+
+
+\index{GameMap@{Game\-Map}!openDoor@{openDoor}}
+\index{openDoor@{openDoor}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool open\-Door (int {\em x}, int {\em y})}\label{classGameMap_a24}
+
+
+\index{GameMap@{Game\-Map}!removeMonster@{removeMonster}}
+\index{removeMonster@{removeMonster}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void remove\-Monster ({\bf Monster} $\ast$ {\em monster})}\label{classGameMap_a1}
+
+
+\index{GameMap@{Game\-Map}!save@{save}}
+\index{save@{save}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void save (ofstream \& {\em file})}\label{classGameMap_a9}
+
+
+\index{GameMap@{Game\-Map}!squareAt@{squareAt}}
+\index{squareAt@{squareAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Map\-Square} $\ast$ square\-At (int {\em x}, int {\em y})}\label{classGameMap_a8}
+
+
+\index{GameMap@{Game\-Map}!squareChange@{squareChange}}
+\index{squareChange@{squareChange}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void square\-Change (int {\em x}, int {\em y})}\label{classGameMap_a13}
+
+
+\index{GameMap@{Game\-Map}!squareChanged@{squareChanged}}
+\index{squareChanged@{squareChanged}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void square\-Changed (int {\em x}, int {\em y})\hspace{0.3cm}{\tt  [signal]}}\label{classGameMap_l0}
+
+
+\index{GameMap@{Game\-Map}!stairsAt@{stairsAt}}
+\index{stairsAt@{stairsAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const {\bf Stair} $\ast$ stairs\-At (int {\em x}, int {\em y}, bool {\em is\-Up}) const}\label{classGameMap_a19}
+
+
+\index{GameMap@{Game\-Map}!triggersAt@{triggersAt}}
+\index{triggersAt@{triggersAt}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<$ {\bf Trigger} $\ast$ $>$ triggers\-At (int {\em x}, int {\em y})}\label{classGameMap_a10}
+
+
+\index{GameMap@{Game\-Map}!width@{width}}
+\index{width@{width}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int width ()}\label{classGameMap_a5}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{GameMap@{Game\-Map}!AbstractAction@{AbstractAction}}
+\index{AbstractAction@{AbstractAction}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Abstract\-Action}\hspace{0.3cm}{\tt  [friend]}}\label{classGameMap_n0}
+
+
+\index{GameMap@{Game\-Map}!Monster@{Monster}}
+\index{Monster@{Monster}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Monster}\hspace{0.3cm}{\tt  [friend]}}\label{classGameMap_n1}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{GameMap@{Game\-Map}!_height@{\_\-height}}
+\index{_height@{\_\-height}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-height}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p0}
+
+
+\index{GameMap@{Game\-Map}!_width@{\_\-width}}
+\index{_width@{\_\-width}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-width}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p1}
+
+
+\index{GameMap@{Game\-Map}!defaultTile@{defaultTile}}
+\index{defaultTile@{defaultTile}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf default\-Tile}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p3}
+
+
+\index{GameMap@{Game\-Map}!monsters@{monsters}}
+\index{monsters@{monsters}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QSet$<${\bf Monster}$\ast$$>$ {\bf monsters}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p5}
+
+
+\index{GameMap@{Game\-Map}!name@{name}}
+\index{name@{name}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString {\bf name}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p2}
+
+
+\index{GameMap@{Game\-Map}!objects@{objects}}
+\index{objects@{objects}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMulti\-Map$<${\bf QInts\-Pair}, {\bf Map\-Object}$\ast$$>$ {\bf objects}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p8}
+
+
+\index{GameMap@{Game\-Map}!squares@{squares}}
+\index{squares@{squares}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Map\-Square}$\ast$ {\bf squares}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p4}
+
+
+\index{GameMap@{Game\-Map}!triggers@{triggers}}
+\index{triggers@{triggers}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Trigger}$\ast$$>$ {\bf triggers}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p6}
+
+
+\index{GameMap@{Game\-Map}!triggersMap@{triggersMap}}
+\index{triggersMap@{triggersMap}!GameMap@{Game\-Map}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMulti\-Map$<${\bf QInts\-Pair},{\bf Trigger}$\ast$$>$ {\bf triggers\-Map}\hspace{0.3cm}{\tt  [protected]}}\label{classGameMap_p7}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf gamemap.hpp}\item 
+{\bf gamemap.cpp}\end{CompactItemize}

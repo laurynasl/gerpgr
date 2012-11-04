@@ -1,0 +1,1 @@
+kate {engine,game,gui,share}/{*.hpp,*.cpp} *.cpp data/{materials,monsters,tiles0,tiles4,weapons,maps/test.map} rpg.pro sheet parser/parser.{h,cpp} edit

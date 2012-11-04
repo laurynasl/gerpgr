@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $# -eq 1 ] ; then
+    makeparam=build/${1}.o
+fi
+
+printf "\nLog started\n" >> log
+date >> log
+( qmake gerpgr.pro && make ${makeparam} ) 2>&1 | tee lastlog | tee -a log

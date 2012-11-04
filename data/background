@@ -1,0 +1,36 @@
+tile "Grass"
+    mainmap
+    height 1000
+end
+
+tile "HillMedium"
+    mainmap
+    height 2000
+end
+
+tile "Water"
+    mainmap
+    height -1000
+    obstacle
+end
+
+tile "UndergroundWall"
+    obstacle
+    bulletproof
+    visionproof
+    underground
+end
+
+tile "UndergroundBkg"
+    underground
+end
+
+tile "Sand"
+    mainmap
+    height 0
+end
+
+tile "Ruins"
+    mainmap
+    type "ruin"
+end

@@ -1,0 +1,94 @@
+\section{Monsters Class Reference}
+\label{classMonsters}\index{Monsters@{Monsters}}
+{\tt \#include $<$monsters.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Monsters} ()
+\item 
+{\bf $\sim$Monsters} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static {\bf Monsters} \& {\bf get\-Instance} ()
+\item 
+static void {\bf add} ({\bf Monster} $\ast$monster)
+\item 
+static bool {\bf remove} ({\bf Monster} $\ast$monster)
+\item 
+static void {\bf clear} ()
+\item 
+static QSet$<$ {\bf Monster} $\ast$ $>$ \& {\bf get\-All\-Monsters} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QSet$<$ {\bf Monster} $\ast$ $>$ {\bf monsters}
+\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static {\bf Monsters} $\ast$ {\bf instance} = 0
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Monsters@{Monsters}!Monsters@{Monsters}}
+\index{Monsters@{Monsters}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Monsters} ()}\label{classMonsters_a0}
+
+
+\index{Monsters@{Monsters}!~Monsters@{$\sim$Monsters}}
+\index{~Monsters@{$\sim$Monsters}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Monsters} ()}\label{classMonsters_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Monsters@{Monsters}!add@{add}}
+\index{add@{add}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void add ({\bf Monster} $\ast$ {\em monster})\hspace{0.3cm}{\tt  [static]}}\label{classMonsters_e1}
+
+
+\index{Monsters@{Monsters}!clear@{clear}}
+\index{clear@{clear}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void clear ()\hspace{0.3cm}{\tt  [static]}}\label{classMonsters_e3}
+
+
+\index{Monsters@{Monsters}!getAllMonsters@{getAllMonsters}}
+\index{getAllMonsters@{getAllMonsters}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QSet$<$ {\bf Monster} $\ast$ $>$ \& get\-All\-Monsters ()\hspace{0.3cm}{\tt  [static]}}\label{classMonsters_e4}
+
+
+\index{Monsters@{Monsters}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Monsters} \& get\-Instance ()\hspace{0.3cm}{\tt  [static]}}\label{classMonsters_e0}
+
+
+\index{Monsters@{Monsters}!remove@{remove}}
+\index{remove@{remove}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool remove ({\bf Monster} $\ast$ {\em monster})\hspace{0.3cm}{\tt  [static]}}\label{classMonsters_e2}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Monsters@{Monsters}!instance@{instance}}
+\index{instance@{instance}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Monsters} $\ast$ {\bf instance} = 0\hspace{0.3cm}{\tt  [static, protected]}}\label{classMonsters_t0}
+
+
+\index{Monsters@{Monsters}!monsters@{monsters}}
+\index{monsters@{monsters}!Monsters@{Monsters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QSet$<${\bf Monster}$\ast$$>$ {\bf monsters}\hspace{0.3cm}{\tt  [protected]}}\label{classMonsters_p0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf monsters.hpp}\item 
+{\bf monsters.cpp}\end{CompactItemize}

@@ -1,0 +1,101 @@
+\section{Faction Class Reference}
+\label{classFaction}\index{Faction@{Faction}}
+Group of people.  
+
+
+{\tt \#include $<$faction.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Faction} ()
+\item 
+virtual {\bf $\sim$Faction} ()
+\item 
+virtual void {\bf load} ({\bf Parser} \&parser)
+\item 
+virtual void {\bf save} (ofstream \&file)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+QString {\bf \_\-name}
+\item 
+int {\bf \_\-friendliness}
+\begin{CompactList}\small\item\em initial relationships with previously unknown faction \item\end{CompactList}\item 
+QMap$<$ {\bf Faction} $\ast$, int $>$ {\bf \_\-relationships}
+\begin{CompactList}\small\item\em relationships with other factions. positive number $<$=$>$ positive relationships \item\end{CompactList}\item 
+{\bf Leader} {\bf \_\-leader}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Group of people. 
+
+People is very generalized term here.
+
+\begin{Desc}
+\item[{\bf Todo}]I need to think more about this. Every man can belong to several factions, so if I know just how big every faction is, how to count all people? OK, faction is not always the same as race, only for biggest factions, like civilians. Smaller factions (like pirates) can consist of several races. Should every faction have a leader? Change of a leader is a historical event.\end{Desc}
+Faction growth heavily depends on food in it's living area
+
+So, a faction needs a leader...
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Faction@{Faction}!Faction@{Faction}}
+\index{Faction@{Faction}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Faction} ()}\label{classFaction_a0}
+
+
+\index{Faction@{Faction}!~Faction@{$\sim$Faction}}
+\index{~Faction@{$\sim$Faction}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Faction} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFaction_a1}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Faction@{Faction}!load@{load}}
+\index{load@{load}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void load ({\bf Parser} \& {\em parser})\hspace{0.3cm}{\tt  [virtual]}}\label{classFaction_a2}
+
+
+\index{Faction@{Faction}!save@{save}}
+\index{save@{save}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void save (ofstream \& {\em file})\hspace{0.3cm}{\tt  [virtual]}}\label{classFaction_a3}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Faction@{Faction}!_friendliness@{\_\-friendliness}}
+\index{_friendliness@{\_\-friendliness}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-friendliness}\hspace{0.3cm}{\tt  [protected]}}\label{classFaction_p1}
+
+
+initial relationships with previously unknown faction 
+
+\index{Faction@{Faction}!_leader@{\_\-leader}}
+\index{_leader@{\_\-leader}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Leader} {\bf \_\-leader}\hspace{0.3cm}{\tt  [protected]}}\label{classFaction_p3}
+
+
+\index{Faction@{Faction}!_name@{\_\-name}}
+\index{_name@{\_\-name}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QString {\bf \_\-name}\hspace{0.3cm}{\tt  [protected]}}\label{classFaction_p0}
+
+
+\index{Faction@{Faction}!_relationships@{\_\-relationships}}
+\index{_relationships@{\_\-relationships}!Faction@{Faction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QMap$<${\bf Faction}$\ast$,int$>$ {\bf \_\-relationships}\hspace{0.3cm}{\tt  [protected]}}\label{classFaction_p2}
+
+
+relationships with other factions. positive number $<$=$>$ positive relationships 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf faction.hpp}\item 
+{\bf faction.cpp}\end{CompactItemize}
